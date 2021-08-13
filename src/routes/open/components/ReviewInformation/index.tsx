@@ -33,7 +33,10 @@ const ReviewComponent = ({ values, form }: ReviewComponentProps): ReactElement =
   const classes = useStyles()
 
   const names = getNamesFrom(values)
-  const addresses = useMemo(() => getAccountsFrom(values), [values])
+  const addresses = useMemo(() => {
+    console.log('calculating addresses') // logs 5 times
+    return getAccountsFrom(values)
+  }, [values])
 
   const numOwners = getNumOwnersFrom(values)
   const safeCreationSalt = getSafeCreationSaltFrom(values as CreateSafeValues)

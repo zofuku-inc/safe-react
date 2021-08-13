@@ -38,7 +38,7 @@ export const useEstimateSafeCreationGas = ({
       if (!addresses.length || !numOwners || !userAccount) {
         return
       }
-
+      console.log('running the estimation') // runs 5 times
       const gasEstimation = await estimateGasForDeployingSafe(addresses, numOwners, userAccount, safeCreationSalt)
       const gasPrice = await calculateGasPrice()
       const estimatedGasCosts = gasEstimation * parseInt(gasPrice, 10)
