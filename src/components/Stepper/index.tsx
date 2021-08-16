@@ -57,6 +57,11 @@ interface GnoStepperProps<V = StepperFormValues> {
   testId?: string
 }
 
+const getPageProps = (pages, page: number) => {
+  const aux = React.Children.toArray(pages)[page]
+  return (aux as React.ReactElement).props
+}
+
 function GnoStepper<V>(props: GnoStepperProps<V>): React.ReactElement {
   const [page, setPage] = useState(0)
   const [values, setValues] = useState({})
@@ -69,18 +74,12 @@ function GnoStepper<V>(props: GnoStepperProps<V>): React.ReactElement {
       })
     }
   }, [props.initialValues])
-
-  const getPageProps: any = (pages) => {
-    const aux: any = React.Children.toArray(pages)[page]
-    return aux.props
-  }
-
   const updateInitialProps = useCallback((newInitialProps) => {
     setValues(newInitialProps)
   }, [])
 
   const getActivePageFrom = (pages) => {
-    const activePageProps = getPageProps(pages)
+    const activePageProps = getPageProps(pages, page)
     const { component, ...restProps } = activePageProps
 
     return component({ ...restProps, updateInitialProps })
@@ -95,7 +94,7 @@ function GnoStepper<V>(props: GnoStepperProps<V>): React.ReactElement {
 
   const next = async (formValues) => {
     const { children } = props
-    const activePageProps = getPageProps(children)
+    const activePageProps = getPageProps(children, page)
     const { prepareNextInitialProps } = activePageProps
 
     let pageInitialProps

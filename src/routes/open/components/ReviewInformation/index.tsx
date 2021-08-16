@@ -1,5 +1,5 @@
 import TableContainer from '@material-ui/core/TableContainer'
-import React, { ReactElement, useEffect, useMemo } from 'react'
+import React, { ReactElement, useMemo } from 'react'
 import { getExplorerInfo, getNetworkInfo } from 'src/config'
 import Block from 'src/components/layout/Block'
 import Col from 'src/components/layout/Col'
@@ -40,11 +40,7 @@ const ReviewComponent = ({ values, form }: ReviewComponentProps): ReactElement =
 
   const numOwners = getNumOwnersFrom(values)
   const safeCreationSalt = getSafeCreationSaltFrom(values as CreateSafeValues)
-  const { gasCostFormatted, gasLimit } = useEstimateSafeCreationGas({ addresses, numOwners, safeCreationSalt })
-
-  useEffect(() => {
-    form.mutators.setValue('gasLimit', gasLimit)
-  }, [gasLimit, form.mutators])
+  const { gasCostFormatted } = useEstimateSafeCreationGas({ addresses, numOwners, safeCreationSalt })
 
   return (
     <>
