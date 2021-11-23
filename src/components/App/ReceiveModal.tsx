@@ -89,7 +89,11 @@ const ReceiveModal = ({ onClose, safeAddress, safeName }: Props): ReactElement =
       </Row>
       <Hairline />
       <Paragraph className={classes.networkInfo} noMargin size="lg" weight="bolder">
+<<<<<<< HEAD
         {networkInfo.label} Network only send {networkInfo.label} assets to this Escrow Wallet.
+=======
+        {networkInfo.label} Network–only send {networkInfo.label} assets to this Safe.
+>>>>>>> dev
       </Paragraph>
       <Paragraph className={classes.annotation} noMargin size="lg">
         This is the address of your Escrow Wallet. Deposit funds by scanning the QR code or copying the address below. Only send{' '}
