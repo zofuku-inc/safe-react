@@ -13,25 +13,25 @@ function Welcome(): ReactElement {
     <Page align="center">
       <Block>
         <Title size="md" strong>
-          Welcome to Gnosis Safe.
+          Welcome to Zofuk uwallet.
         </Title>
         <Title size="xs">
-          Gnosis Safe is the most trusted platform to manage digital assets. <br /> Here is how to get started:
+          Zofuku wallet is the most trusted platform to manage digital assets. <br /> Here is how to get started:
         </Title>
         <CardsContainer>
           <StyledCard>
             {/* Create Safe */}
             <CardContentContainer>
               <Title size="sm" strong withoutMargin>
-                Create Safe
+                Create wallet
               </Title>
               <CardDescriptionContainer>
-                <Text size="xl">Create a new Safe that is controlled by one or multiple owners.</Text>
-                <Text size="xl">You will be required to pay a network fee for creating your new Safe.</Text>
+                <Text size="xl">Create a new multisig wallet that is controlled by one or multiple owners.</Text>
+                <Text size="xl">You will be required to pay a network fee for creating your new wallet.</Text>
               </CardDescriptionContainer>
               <Button size="lg" color="primary" variant="contained" component={Link} to={OPEN_SAFE_ROUTE}>
                 <Text size="xl" color="white">
-                  + Create new Safe
+                  + Create new wallet
                 </Text>
               </Button>
             </CardContentContainer>
@@ -39,12 +39,12 @@ function Welcome(): ReactElement {
             <CardContentContainer>
               {/* Load Safe */}
               <Title size="sm" strong withoutMargin>
-                Load Existing Safe
+                Load Existing wallet
               </Title>
               <CardDescriptionContainer>
                 <Text size="xl">
-                  Already have a Safe or want to access it from a different device? Easily load your Safe using your
-                  Safe address.
+                  Already have a wallet or want to access it from a different device? Easily load your wallet using your
+                  wallet address.
                 </Text>
               </CardDescriptionContainer>
               <Button
@@ -57,7 +57,7 @@ function Welcome(): ReactElement {
                 to={LOAD_SAFE_ROUTE}
               >
                 <StyledButtonLabel size="xl" color="secondary">
-                  Add existing Safe
+                  Add existing wallet
                 </StyledButtonLabel>
               </Button>
             </CardContentContainer>
