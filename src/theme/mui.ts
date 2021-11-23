@@ -460,7 +460,7 @@ export const DropdownListTheme = {
       },
       button: {
         '&:hover': {
-          backgroundColor: '#f7f5f5',
+          backgroundColor: '#f5f5f7',
         },
       },
     },

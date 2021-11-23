@@ -71,7 +71,7 @@ export const NOTIFICATIONS: Record<NotificationId, Notification> = {
   },
   // Safe creation
   CREATE_SAFE_FAILED_MSG: {
-    message: 'Safe creation failed',
+    message: 'Creation failed',
     options: { variant: ERROR, persist: false, autoHideDuration: longDuration },
   },
   // Regular/Custom Transactions
@@ -124,12 +124,12 @@ export const NOTIFICATIONS: Record<NotificationId, Notification> = {
     options: { variant: ERROR, persist: true },
   },
   SAFE_APPS_FETCH_ERROR_MSG: {
-    message: 'Error fetching the Safe Apps, please refresh the page',
+    message: 'Error fetching the Zofuku Wallet Apps, please refresh the page',
     options: { variant: ERROR, persist: false, autoHideDuration: shortDuration },
   },
   // Safe Name
   SAFE_NAME_CHANGED_MSG: {
-    message: 'Safe name changed',
+    message: 'Escrow Wallet name changed',
     options: { variant: SUCCESS, persist: false, autoHideDuration: shortDuration },
   },
 
@@ -205,7 +205,7 @@ export const NOTIFICATIONS: Record<NotificationId, Notification> = {
 
   // Network
   TESTNET_VERSION_MSG: {
-    message: "Testnet Version: Don't send production assets to this Safe",
+    message: "Testnet Version: Don't send production assets to this Escrow Wallet",
     options: { variant: WARNING, persist: false, preventDuplicate: true, autoHideDuration: longDuration },
   },
 
@@ -237,7 +237,7 @@ export const NOTIFICATIONS: Record<NotificationId, Notification> = {
 
   // Safe Version
   SAFE_NEW_VERSION_AVAILABLE: {
-    message: 'There is a new version available for this Safe. Update now!',
+    message: 'There is a new version available. Update now!',
     options: { variant: WARNING, persist: false, preventDuplicate: true },
   },
 }

@@ -55,7 +55,7 @@ const ReviewComponent = ({ values, form }: ReviewComponentProps): ReactElement =
             </Block>
             <Block margin="lg">
               <Paragraph color="disabled" noMargin size="sm">
-                Name of new Safe
+                Name of new Escrow Wallet
               </Paragraph>
               <Paragraph
                 className={classes.name}

@@ -40,10 +40,10 @@ const Advanced = (): ReactElement => {
       {/* Nonce */}
       <Block className={classes.container}>
         <Title size="xs" withoutMargin>
-          Safe Nonce
+          Escrow Wallet Nonce
         </Title>
         <InfoText size="lg">
-          For security reasons, transactions made with Gnosis Safe need to be executed in order. The nonce shows you
+          For security reasons, transactions made with Zofuku Wallet need to be executed in order. The nonce shows you
           which transaction will be executed next. You can find the nonce for a transaction in the transaction details.
         </InfoText>
         <InfoText color="secondaryLight" size="xl">
@@ -52,12 +52,12 @@ const Advanced = (): ReactElement => {
       </Block>
 
       {/* Modules */}
-      <Block className={classes.container}>
+      {/* <Block className={classes.container}>
         <Title size="xs" withoutMargin>
-          Safe Modules
+          Escrow Wallet Modules
         </Title>
         <InfoText size="lg">
-          Modules allow you to customize the access-control logic of your Safe. Modules are potentially risky, so make
+          Modules allow you to customize the access-control logic of your wallet. Modules are potentially risky, so make
           sure to only use modules from trusted sources. Learn more about modules{' '}
           <a
             href="https://docs.gnosis.io/safe/docs/contracts_architecture/#3-module-management"
@@ -70,7 +70,7 @@ const Advanced = (): ReactElement => {
         </InfoText>
 
         {!moduleData || !moduleData.length ? <NoModuleLegend /> : <ModulesTable moduleData={moduleData} />}
-      </Block>
+      </Block> */}
     </>
   )
 }

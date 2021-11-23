@@ -139,8 +139,8 @@ export const EditTxParametersForm = ({
                 <Field
                   name="safeNonce"
                   defaultValue={safeNonce}
-                  placeholder="Safe nonce"
-                  text="Safe nonce"
+                  placeholder="Escrow Wallet nonce"
+                  text="Nonce"
                   type="number"
                   min="0"
                   component={TextField}
@@ -149,8 +149,8 @@ export const EditTxParametersForm = ({
                 <Field
                   name="safeTxGas"
                   defaultValue={safeTxGas}
-                  placeholder="SafeTxGas"
-                  text="SafeTxGas"
+                  placeholder="TxGas"
+                  text="TxGas"
                   type="number"
                   min="0"
                   component={TextField}

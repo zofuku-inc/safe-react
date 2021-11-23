@@ -27,7 +27,7 @@ const wallets: Wallet[] = [
     walletName: WALLETS.TREZOR,
     appUrl: 'gnosis-safe.io',
     preferred: true,
-    email: 'safe@gnosis.io',
+    email: 'hello@zofuku.com',
     desktop: true,
     rpcUrl,
   },
@@ -42,7 +42,7 @@ const wallets: Wallet[] = [
   {
     walletName: WALLETS.LATTICE,
     rpcUrl,
-    appName: 'Gnosis Safe',
+    appName: 'Zofuku Wallet',
     desktop: false,
   },
   {

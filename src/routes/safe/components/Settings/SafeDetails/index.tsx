@@ -144,16 +144,16 @@ const SafeDetails = (): ReactElement => {
                     testId={SAFE_NAME_UPDATE_SAFE_BTN_TEST_ID}
                     variant="contained"
                   >
-                    Update Safe
+                    Update Version
                   </Button>
                 </Paragraph>
               </Row>
             ) : null}
           </Block>
           <Block className={classes.formContainer}>
-            <Heading tag="h2">Modify Safe name</Heading>
+            <Heading tag="h2">Modify wallet name</Heading>
             <Paragraph>
-              You can change the name of this Safe. This name is only stored locally and never shared with Gnosis or any
+              You can change the name of this wallet. This name is only stored locally and never shared with Zofuku or any
               third parties.
             </Paragraph>
             <Block className={classes.root}>
@@ -161,9 +161,9 @@ const SafeDetails = (): ReactElement => {
                 component={TextField}
                 defaultValue={safeName}
                 name="safeName"
-                placeholder="Safe name*"
+                placeholder="Escrow Wallet name*"
                 testId={SAFE_NAME_INPUT_TEST_ID}
-                text="Safe name*"
+                text="Escrow Wallet name*"
                 type="text"
                 validate={composeValidators(required, validAddressBookName)}
               />

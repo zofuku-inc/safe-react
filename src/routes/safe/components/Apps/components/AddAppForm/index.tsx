@@ -121,9 +121,9 @@ const AddApp = ({ appList, closeModal }: AddAppProps): ReactElement => {
       {() => (
         <>
           <Modal.Body>
-            <AppDocsInfo>
+            {/* <AppDocsInfo>
               <Text size="xl" as="span" color="secondary">
-                Safe Apps are third-party extensions.
+                Zofuku Wallet Apps are third-party extensions.
               </Text>
               <StyledLink
                 href="https://docs.gnosis.io/safe/docs/sdks_safe_apps/"
@@ -132,11 +132,11 @@ const AddApp = ({ appList, closeModal }: AddAppProps): ReactElement => {
                 title="Learn more about building Safe Apps"
               >
                 <Text size="xl" as="span" color="primary">
-                  Learn more about building Safe Apps.
+                  Learn more about building Zofuku Wallet Apps.
                 </Text>
                 <Icon size="sm" type="externalLink" color="primary" />
               </StyledLink>
-            </AppDocsInfo>
+            </AppDocsInfo> */}
             <AppUrl appList={appList} />
             {/* Fetch app from url and return a SafeApp */}
             <AppInfoUpdater onAppInfo={setAppInfo} onLoading={setIsLoading} onError={onError} />

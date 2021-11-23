@@ -59,7 +59,7 @@ export const styles = createStyles({
   selectedOwner: {
     padding: sm,
     alignItems: 'center',
-    backgroundColor: '#f7f5f5',
+    backgroundColor: '#f5f5f7',
   },
   open: {
     paddingLeft: sm,

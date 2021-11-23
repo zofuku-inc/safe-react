@@ -60,7 +60,7 @@ export const useStyles = makeStyles(
     selectedOwnerAdded: {
       padding: sm,
       alignItems: 'center',
-      backgroundColor: '#f7f5f5',
+      backgroundColor: '#f5f5f7',
     },
     gasCostsContainer: {
       display: 'flex',

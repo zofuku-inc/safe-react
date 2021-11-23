@@ -64,7 +64,7 @@ export const checkIfSafeNeedsUpdate = async (
   lastSafeVersion: string,
 ): Promise<SafeVersionInfo> => {
   if (!safeVersion || !lastSafeVersion) {
-    throw new Error('checkIfSafeNeedsUpdate: No Safe Instance or version provided')
+    throw new Error('checkIfSafeNeedsUpdate: No Instance or version provided')
   }
   const current = semverValid(safeVersion) as string
   const latest = semverValid(lastSafeVersion) as string

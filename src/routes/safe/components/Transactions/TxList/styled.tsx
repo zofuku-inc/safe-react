@@ -423,7 +423,7 @@ export const OwnerList = styled.ul`
     }
 
     span {
-      color: #008c73;
+      color: #1e47fd;
       font-weight: bold;
     }
   }

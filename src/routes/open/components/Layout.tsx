@@ -117,7 +117,7 @@ export const Layout = (props: LayoutProps): React.ReactElement => {
           <ChevronLeft />
         </IconButton>
         <Heading tag="h2" testId="create-safe-form-title">
-          Create new Safe
+          Create new Escrow Wallet
         </Heading>
       </Row>
       <Stepper

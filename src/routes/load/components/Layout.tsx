@@ -47,7 +47,7 @@ const Layout = ({ onLoadSafeSubmit, provider, userAddress }: LayoutProps): React
           <IconButton disableRipple onClick={back} style={iconStyle}>
             <ChevronLeft />
           </IconButton>
-          <Heading tag="h2">Add existing Safe</Heading>
+          <Heading tag="h2">Add existing wallet</Heading>
         </Row>
         <Stepper<LoadFormValues>
           buttonLabels={buttonLabels}

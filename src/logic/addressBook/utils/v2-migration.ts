@@ -72,7 +72,7 @@ const migrateSafeNames = ({ states, namespace, namespaceSeparator }: StorageConf
 
   // update stored safe
   localStorage.setItem(safesKey, JSON.stringify(migratedSafes))
-  saveSafes(migratedSafes).then(() => console.info('Safe objects migrated'))
+  saveSafes(migratedSafes).then(() => console.info('Objects migrated'))
 }
 
 /**

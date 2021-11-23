@@ -14,7 +14,7 @@ const loadDefaultSafe =
       dispatch(setDefaultSafe(checksumed))
     } catch (err) {
       // eslint-disable-next-line
-      console.error('Error while getting default Safe from storage:', err)
+      console.error('Error while getting default wallet from storage:', err)
     }
   }
 

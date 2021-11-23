@@ -157,13 +157,13 @@ const SafeOwnersForm = (props): React.ReactElement => {
     <>
       <Block className={classes.title}>
         <Paragraph color="primary" noMargin size="lg" data-testid="create-safe-step-two">
-          Your Safe will have one or more owners. We have prefilled the first owner with your connected wallet details,
+          We have prefilled the first owner with your connected wallet details,
           but you are free to change this to a different owner.
           <br />
           <br />
-          Add additional owners (e.g. wallets of your teammates) and specify how many of them have to confirm a
+          Add additional owners (e.g. wallets of stakeholders) and specify how many of them have to confirm a
           transaction before it gets executed. You can also add/remove owners and change the signature threshold after
-          your Safe is created.
+          your wallet is created.
           <Link
             href="https://help.gnosis-safe.io/en/articles/4772567-what-gnosis-safe-setup-should-i-use"
             target="_blank"
@@ -172,7 +172,7 @@ const SafeOwnersForm = (props): React.ReactElement => {
             title="Learn about which Safe setup to use"
           >
             <Text size="xl" as="span" color="primary">
-              Learn about which Safe setup to use
+              Learn about which wallet setup to use
             </Text>
             <Icon size="sm" type="externalLink" color="primary" />
           </Link>

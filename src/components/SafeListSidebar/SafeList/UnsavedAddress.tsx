@@ -48,7 +48,7 @@ export const UnsavedAddress = ({ address, onClick, children }: Props): ReactElem
 
       <Link to={`${LOAD_ADDRESS}/${address}`} onClick={onClick}>
         <Text size="sm" color="primary">
-          Add Safe
+          Add Wallet
         </Text>
       </Link>
     </Wrapper>

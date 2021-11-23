@@ -44,8 +44,8 @@ const SafeNameForm = ({ safeName }: { safeName: string }): React.ReactElement =>
     <>
       <Block margin="lg">
         <Paragraph color="primary" noMargin size="lg">
-          You are about to create a new Safe with one or more owners. First, let&apos;s give your new Safe a name. This
-          name is only stored locally and will never be shared with Gnosis or any third parties.
+          You are about to create a new escrow wallet with multiple owners. First, let&apos;s give your new wallet a name. This
+          name is only stored locally and will never be shared with Zofuku or any third parties.
         </Paragraph>
       </Block>
       <Block className={classes.root} margin="lg">
@@ -53,8 +53,8 @@ const SafeNameForm = ({ safeName }: { safeName: string }): React.ReactElement =>
           component={TextField}
           defaultValue={safeName}
           name={FIELD_NAME}
-          placeholder="Name of the new Safe"
-          text="Safe name"
+          placeholder="Name of the new Escorw Wallet"
+          text="Escrow Wallet name"
           type="text"
           validate={composeValidators(required, validAddressBookName)}
           testId="create-safe-name-field"

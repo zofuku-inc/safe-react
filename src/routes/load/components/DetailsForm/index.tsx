@@ -85,15 +85,15 @@ const DetailsForm = ({ errors, form }: DetailsFormProps): ReactElement => {
     <>
       <Block margin="md">
         <Paragraph color="primary" noMargin size="md">
-          You are about to add an existing Gnosis Safe. First, choose a name and enter the Safe address. The name is
-          only stored locally and will never be shared with Gnosis or any third parties.
+          You are about to add an existing Zofuku Escrow wallet. First, choose a name and enter the wallet address. The name is
+          only stored locally and will never be shared with Zofuku or any third parties.
           <br />
-          Your connected wallet does not have to be the owner of this Safe. In this case, the interface will provide you
+          Your connected wallet does not have to be the owner of this escrow wallet. In this case, the interface will provide you
           a read-only view.
         </Paragraph>
 
         <Paragraph color="primary" size="md" className={classes.links}>
-          Don&apos;t have the address of the Safe you created?{' '}
+          Don&apos;t have the address of the wallet you created?{' '}
           <a
             href="https://help.gnosis-safe.io/en/articles/4971293-i-don-t-remember-my-safe-address-where-can-i-find-it"
             rel="noopener noreferrer"
@@ -109,8 +109,8 @@ const DetailsForm = ({ errors, form }: DetailsFormProps): ReactElement => {
             defaultValue={safeName}
             component={TextField}
             name={FIELD_LOAD_NAME}
-            placeholder="Name of the Safe*"
-            text="Safe name"
+            placeholder="Name of the wallet*"
+            text="Escrow Wallet name"
             type="text"
             validate={composeValidators(required, validAddressBookName)}
             testId="load-safe-name-field"
@@ -136,8 +136,8 @@ const DetailsForm = ({ errors, form }: DetailsFormProps): ReactElement => {
               }
             }
             name={FIELD_LOAD_ADDRESS}
-            placeholder="Safe Address*"
-            text="Safe Address"
+            placeholder="Escrow Wallet Address*"
+            text="Escrow Wallet Address"
             testId="load-safe-address-field"
           />
         </Col>
@@ -148,11 +148,11 @@ const DetailsForm = ({ errors, form }: DetailsFormProps): ReactElement => {
       <Block margin="sm">
         <Paragraph className={classes.links} color="primary" noMargin size="md">
           By continuing you consent to the{' '}
-          <a href="https://gnosis-safe.io/terms" rel="noopener noreferrer" target="_blank">
+          <a href="https://zofuku.com/terms-of-service" rel="noopener noreferrer" target="_blank">
             terms of use
           </a>{' '}
           and{' '}
-          <a href="https://gnosis-safe.io/privacy" rel="noopener noreferrer" target="_blank">
+          <a href="https://zofuku.com/privacy-policy" rel="noopener noreferrer" target="_blank">
             privacy policy
           </a>
           .

@@ -289,7 +289,7 @@ const AppFrame = ({ appUrl }: Props): ReactElement => {
     return (
       <OwnerDisclaimer>
         <FixedIcon type="notOwner" />
-        <Title size="xs">To use apps, you must be an owner of this Safe</Title>
+        <Title size="xs">To use apps, you must be an owner of this wallet</Title>
       </OwnerDisclaimer>
     )
   }

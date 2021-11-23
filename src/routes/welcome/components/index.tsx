@@ -77,19 +77,19 @@ export const WelcomeLayout = ({ isOldMultisigMigration }: Props): React.ReactEle
     <Block>
       {/* Title */}
       <Title size="md" strong>
-        Welcome to Gnosis Safe.
+        Welcome to Zofuku Wallet.
       </Title>
 
       {/* Subtitle */}
       <Title size="xs">
         {isOldMultisigMigration ? (
           <>
-            We will replicate the owner structure from your existing Gnosis MultiSig to let you test the new interface.
+            We will replicate the owner structure from your existing MultiSig to let you test the new interface.
             As soon as you feel comfortable, start moving funds to your new Safe.
           </>
         ) : (
           <>
-            Gnosis Safe is the most trusted platform to manage digital assets. <br /> Here is how to get started:{' '}
+            Zofuku Wallet is the most trusted platform to manage digital assets. <br /> Here is how to get started:{' '}
           </>
         )}
       </Title>
@@ -99,7 +99,7 @@ export const WelcomeLayout = ({ isOldMultisigMigration }: Props): React.ReactEle
           {/* Connect wallet */}
           <StyledCard>
             <TitleWrapper>
-              <Dot color="primary">
+              <Dot color="secondary">
                 {!provider ? <Title size="xs">1</Title> : <Icon color="white" type="check" size="md" />}
               </Dot>
               <StyledTitle size="sm" strong withoutMargin>
@@ -107,10 +107,11 @@ export const WelcomeLayout = ({ isOldMultisigMigration }: Props): React.ReactEle
               </StyledTitle>
             </TitleWrapper>
             <Text size="xl">
-              Gnosis Safe supports a wide range of wallets that you can choose to interact with your Safe.
+              Zofuku Wallet supports a real estate transaction.
             </Text>
-            <StyledButtonLink textSize="xl" color="primary" iconType="externalLink" iconSize="sm">
+            <StyledButtonLink textSize="xl" color="secondary" iconType="externalLink" iconSize="sm">
               <LinkSRC
+                color="secondary"
                 size="xl"
                 href="https://help.gnosis-safe.io/en/articles/4689442-why-do-i-need-to-connect-a-wallet"
                 target="_blank"
@@ -122,7 +123,7 @@ export const WelcomeLayout = ({ isOldMultisigMigration }: Props): React.ReactEle
             </StyledButtonLink>
             <StyledButton
               size="lg"
-              color="primary"
+              color="secondary"
               variant="contained"
               onClick={onConnectButtonClick}
               disabled={!!provider}
@@ -138,20 +139,20 @@ export const WelcomeLayout = ({ isOldMultisigMigration }: Props): React.ReactEle
             {/* Create safe */}
             <CardsCol>
               <TitleWrapper>
-                <Dot color="primary">
+                <Dot color="secondary">
                   <Title size="xs">2</Title>
                 </Dot>
                 <StyledTitle size="sm" strong withoutMargin>
-                  Create Safe
+                  Create Escrow Wallet
                 </StyledTitle>
               </TitleWrapper>
               <Text size="xl">
-                Create a new Safe that is controlled by one or multiple owners. <br />
-                You will be required to pay a network fee for creating your new Safe.
+                Create a new escrow wallet that is controlled by multiple owners. <br />
+                You will be required to pay a network fee for creating your new wallet.
               </Text>
-              <StyledButton size="lg" color="primary" variant="contained" component={Link} to={OPEN_ADDRESS}>
+              <StyledButton size="lg" color="secondary" variant="contained" component={Link} to={OPEN_ADDRESS}>
                 <Text size="xl" color="white">
-                  + Create new Safe
+                  + Create new escrow wallet
                 </Text>
               </StyledButton>
             </CardsCol>
@@ -161,11 +162,11 @@ export const WelcomeLayout = ({ isOldMultisigMigration }: Props): React.ReactEle
             {/* Load safe */}
             <CardsCol>
               <StyledTitleOnly size="sm" strong withoutMargin>
-                Add existing Safe
+                Add existing Escrow Wallet
               </StyledTitleOnly>
               <Text size="xl">
-                Already have a Safe? Do you want to access your Safe from a different device? Easily add it using your
-                Safe address.
+                Already have a escrow wallet? Do you want to access your Safe from a different device? Easily add it using your
+                wallet address.
               </Text>
               <StyledButton
                 variant="bordered"
@@ -177,7 +178,7 @@ export const WelcomeLayout = ({ isOldMultisigMigration }: Props): React.ReactEle
                 to={LOAD_ADDRESS}
               >
                 <Text size="xl" color="secondary">
-                  Add existing Safe
+                  Add existing wallet
                 </Text>
               </StyledButton>
             </CardsCol>

@@ -95,7 +95,7 @@ function createWindow(port = DEFAULT_PORT) {
       enableRemoteModule: true,
       nativeWindowOpen: true, // need to be set in order to display modal
     },
-    icon: electron.nativeImage.createFromPath(path.join(__dirname, '../build/resources/safe.png')),
+    icon: electron.nativeImage.createFromPath(path.join(__dirname, '../build/resources/zofuku-logo-sq-white.png')),
   })
 
   mainWindow.once('ready-to-show', () => {

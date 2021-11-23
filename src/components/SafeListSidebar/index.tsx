@@ -120,7 +120,7 @@ export const SafeListSidebar = ({ children }: Props): ReactElement => {
             to={WELCOME_ADDRESS}
             variant="contained"
           >
-            + Add Safe
+            + Add Wallet
           </Button>
           <Spacer />
         </Row>

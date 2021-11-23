@@ -1,4 +1,4 @@
-# Gnosis Safe
+# Zofuku Wallet
 
 The most trusted platform to store digital assets on Ethereum. More info at [gnosis-safe.io](https://gnosis-safe.io/)
 

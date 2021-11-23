@@ -31,7 +31,7 @@ export const useTransactionType = (tx: Transaction): TxTypeProps => {
   useEffect(() => {
     switch (tx.txInfo.type) {
       case 'Creation': {
-        setType({ icon: SettingsTxIcon, text: 'Safe created' })
+        setType({ icon: SettingsTxIcon, text: 'Escrow Wallet created' })
         break
       }
       case 'Transfer': {

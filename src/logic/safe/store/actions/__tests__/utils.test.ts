@@ -106,7 +106,7 @@ describe('getNewTxNonce', () => {
     mockFnNonce.mockRestore()
     mockFnCall.mockRestore()
   })
-  it('Given a Safe and the last transaction, should return nonce of the last transaction + 1', async () => {
+  it('Given a wallet and the last transaction, should return nonce of the last transaction + 1', async () => {
     // given
     const safeInstance = getMockedSafeInstance({})
     const expectedResult = '11'

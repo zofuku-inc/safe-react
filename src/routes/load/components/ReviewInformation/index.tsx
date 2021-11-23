@@ -50,7 +50,7 @@ const ReviewComponent = ({ userAddress, values }: Props): ReactElement => {
           </Block>
           <Block margin="lg">
             <Paragraph color="disabled" noMargin size="sm">
-              Name of the Safe
+              Name of the Escrow Wallet
             </Paragraph>
             <Paragraph
               className={classes.name}
@@ -65,7 +65,7 @@ const ReviewComponent = ({ userAddress, values }: Props): ReactElement => {
           </Block>
           <Block margin="lg">
             <Paragraph color="disabled" noMargin size="sm">
-              Safe address
+              Escrow Wallet address
             </Paragraph>
             <Row className={classes.container}>
               <EthHashInfo

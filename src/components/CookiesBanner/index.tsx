@@ -183,7 +183,7 @@ const CookiesBanner = (): ReactElement => {
   }
 
   if (showIntercom && !isSafeAppView) {
-    loadIntercom()
+    // loadIntercom()
   }
 
   const CookiesBannerForm = (props: CookiesBannerFormProps) => {
