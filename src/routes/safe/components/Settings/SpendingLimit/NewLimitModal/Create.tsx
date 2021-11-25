@@ -47,7 +47,8 @@ const canReview = ({
 const Create = ({ initialValues, onCancel, onReview }: NewSpendingLimitProps): ReactElement => {
   return (
     <>
-      <ModalHeader onClose={onCancel} title="New spending limit" subTitle="1 of 2" />
+      {/* <ModalHeader onClose={onCancel} title="New spending limit" subTitle="1 of 2" /> */}
+      <ModalHeader onClose={onCancel} title="送金権限を設定" subTitle="1 of 2" />
       <Hairline />
       <GnoForm formMutators={formMutators} onSubmit={onReview} initialValues={initialValues}>
         {(...args) => {
@@ -63,7 +64,8 @@ const Create = ({ initialValues, onCancel, onReview }: NewSpendingLimitProps): R
               <Modal.Footer>
                 <Modal.Footer.Buttons
                   cancelButtonProps={{ onClick: onCancel }}
-                  confirmButtonProps={{ disabled: !canReview(args[2]), text: 'Review' }}
+                  // confirmButtonProps={{ disabled: !canReview(args[2]), text: 'Review' }}
+                  confirmButtonProps={{ disabled: !canReview(args[2]), text: 'レビュー' }}
                 />
               </Modal.Footer>
             </>

@@ -37,11 +37,13 @@ const SpendingLimit = (): ReactElement => {
     <>
       <Block className={classes.container} grow="grow">
         <Title size="xs" withoutMargin>
-          Spending limit
+          権限設定
+          {/* Spending limit */}
         </Title>
         <InfoText size="lg">
-          You can set rules for specific beneficiaries to access funds from this Safe without having to collect all
-          signatures.
+          全オーナーのサインがなくてもウォレットから資金を移動させるために、ルールを設定することができます。
+          {/* You can set rules for specific beneficiaries to access funds from this Safe without having to collect all
+          signatures. */}
         </InfoText>
         {spendingLimitData?.length ? <LimitsTable data={spendingLimitData} /> : <NewLimitSteps />}
       </Block>
@@ -58,7 +60,8 @@ const SpendingLimit = (): ReactElement => {
                 onClick={openNewSpendingLimitModal}
                 variant="contained"
               >
-                New spending limit
+                新しく設定する
+                {/* New spending limit */}
               </Button>
             </Col>
           </Row>

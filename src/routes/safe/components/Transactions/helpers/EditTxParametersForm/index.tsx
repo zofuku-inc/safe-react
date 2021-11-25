@@ -139,8 +139,10 @@ export const EditTxParametersForm = ({
                 <Field
                   name="safeNonce"
                   defaultValue={safeNonce}
-                  placeholder="Safe nonce"
-                  text="Safe nonce"
+                  // placeholder="Safe nonce"
+                  // text="Safe nonce"
+                  placeholder="Nonce"
+                  text="Nonce"
                   type="number"
                   min="0"
                   component={TextField}
@@ -149,8 +151,10 @@ export const EditTxParametersForm = ({
                 <Field
                   name="safeTxGas"
                   defaultValue={safeTxGas}
-                  placeholder="SafeTxGas"
-                  text="SafeTxGas"
+                  // placeholder="SafeTxGas"
+                  // text="SafeTxGas"
+                  placeholder="ガス代"
+                  text="ガス代"
                   type="number"
                   min="0"
                   component={TextField}
@@ -177,8 +181,10 @@ export const EditTxParametersForm = ({
                     <Field
                       name="ethGasLimit"
                       defaultValue={ethGasLimit}
-                      placeholder="Gas limit"
-                      text="Gas limit"
+                      // placeholder="Gas limit"
+                      // text="Gas limit"
+                      placeholder="ガスリミット"
+                      text="ガスリミット"
                       type="number"
                       component={TextField}
                       disabled={parametersStatus === 'CANCEL_TRANSACTION'}
@@ -187,14 +193,16 @@ export const EditTxParametersForm = ({
                       name="ethGasPrice"
                       defaultValue={ethGasPrice}
                       type="number"
-                      placeholder="Gas price (GWEI)"
-                      text="Gas price (GWEI)"
+                      // placeholder="Gas price (GWEI)"
+                      // text="Gas price (GWEI)"
+                      placeholder="ガス価格 (GWEI)"
+                      text="ガス価格 (GWEI)"
                       component={TextField}
                       disabled={!areEthereumParamsVisible(parametersStatus)}
                     />
                   </EthereumOptions>
 
-                  <StyledLink
+                  {/* <StyledLink
                     href="https://help.gnosis-safe.io/en/articles/4738445-configure-advanced-transaction-parameters-manually"
                     target="_blank"
                   >
@@ -202,7 +210,7 @@ export const EditTxParametersForm = ({
                       How can I configure these parameters manually?
                     </Text>
                     <Icon size="sm" type="externalLink" color="primary" />
-                  </StyledLink>
+                  </StyledLink> */}
                 </>
               )}
 
@@ -211,10 +219,12 @@ export const EditTxParametersForm = ({
               {/* Footer */}
               <Row align="center" className={classes.buttonRow}>
                 <Modal.Footer.Buttons
-                  cancelButtonProps={{ onClick: onCloseFormHandler, text: 'Back' }}
+                  // cancelButtonProps={{ onClick: onCloseFormHandler, text: 'Back' }}
+                  cancelButtonProps={{ onClick: onCloseFormHandler, text: 'もどる' }}
                   confirmButtonProps={{
                     type: 'submit',
-                    text: 'Confirm',
+                    // text: 'Confirm',
+                    text: '確認',
                     testId: 'submit-tx-btn',
                   }}
                 />

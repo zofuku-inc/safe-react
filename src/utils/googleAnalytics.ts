@@ -68,9 +68,12 @@ export const SAFE_APP_EVENTS: Record<string, EventArgs> = {
 }
 
 export const SETTINGS_EVENTS: Record<string, EventArgs> = {
-  ADVANCED: { ...SAFE_EVENTS.SETTINGS, label: 'Advanced' },
-  DETAILS: { ...SAFE_EVENTS.SETTINGS, label: 'Details' },
-  OWNERS: { ...SAFE_EVENTS.SETTINGS, label: 'Owners' },
+  ADVANCED: { ...SAFE_EVENTS.SETTINGS, label: 'アドバンス' },
+  DETAILS: { ...SAFE_EVENTS.SETTINGS, label: '詳細' },
+  OWNERS: { ...SAFE_EVENTS.SETTINGS, label: 'オーナー' },
+  // ADVANCED: { ...SAFE_EVENTS.SETTINGS, label: 'Advanced' },
+  // DETAILS: { ...SAFE_EVENTS.SETTINGS, label: 'Details' },
+  // OWNERS: { ...SAFE_EVENTS.SETTINGS, label: 'Owners' },
 }
 
 export const COOKIES_LIST = [

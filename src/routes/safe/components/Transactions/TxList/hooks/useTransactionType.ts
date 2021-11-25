@@ -16,7 +16,8 @@ export type TxTypeProps = {
 }
 
 export const useTransactionType = (tx: Transaction): TxTypeProps => {
-  const [type, setType] = useState<TxTypeProps>({ icon: CustomTxIcon, text: 'Contract interaction' })
+  // const [type, setType] = useState<TxTypeProps>({ icon: CustomTxIcon, text: 'Contract interaction' })
+  const [type, setType] = useState<TxTypeProps>({ icon: CustomTxIcon, text: 'コントラクトを経由' })
   const safeAddress = extractSafeAddress()
   const toAddress = getTxTo(tx)
   // Fixed casting because known address only works for Custom tx
@@ -28,7 +29,8 @@ export const useTransactionType = (tx: Transaction): TxTypeProps => {
   useEffect(() => {
     switch (tx.txInfo.type) {
       case 'Creation': {
-        setType({ icon: toAddress?.logoUri || SettingsTxIcon, text: 'Safe created' })
+        // setType({ icon: toAddress?.logoUri || SettingsTxIcon, text: 'Safe created' })
+        setType({ icon: toAddress?.logoUri || SettingsTxIcon, text: 'マルチシグ作成' })
         break
       }
       case 'Transfer': {

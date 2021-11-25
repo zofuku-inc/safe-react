@@ -35,8 +35,18 @@ export const TransactionFees = ({
   return (
     <>
       {gasCostFormatted != null && (
-        <Paragraph size="lg" align="center">
-          You&apos;re about to {transactionAction} a transaction and will have to confirm it with your currently
+        <Paragraph size="lg" align="left">
+
+         {' '}
+          {!isOffChainSignature && (
+            <>
+              ネットワーク手数料(ガス代) として、{' '}
+              <Text size="lg" as="span" color="text" strong>
+                {gasCostFormatted}
+              </Text>{' '}
+              {nativeCoin.name} 以上の残高がお客様のウォレットにあることをご確認ください。
+
+          {/* You&apos;re about to {transactionAction} a transaction and will have to confirm it with your currently
           connected wallet.{' '}
           {!isOffChainSignature && (
             <>
@@ -44,7 +54,8 @@ export const TransactionFees = ({
               <Text size="lg" as="span" color="text" strong>
                 {gasCostFormatted}
               </Text>{' '}
-              (fee price) {nativeCoin.name} in this wallet to fund this confirmation.
+              (fee price) {nativeCoin.name} in this wallet to fund this confirmation. */}
+
             </>
           )}
         </Paragraph>

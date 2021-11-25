@@ -94,7 +94,8 @@ export const ExportEntriesModal = ({ isOpen, onClose }: ExportEntriesModalProps)
   return (
     <Modal description="Export address book" handleClose={onClose} open={isOpen} title="Export address book">
       <Modal.Header onClose={onClose}>
-        <Modal.Header.Title withoutMargin>Export address book</Modal.Header.Title>
+        {/* <Modal.Header.Title withoutMargin>Export address book</Modal.Header.Title> */}
+        <Modal.Header.Title withoutMargin>アドレス帳のエクスポート</Modal.Header.Title>
       </Modal.Header>
 
       <Modal.Body withoutPadding>
@@ -116,7 +117,8 @@ export const ExportEntriesModal = ({ isOpen, onClose }: ExportEntriesModalProps)
               </Text>
             ) : (
               <Text size="xl" as="span">
-                An error occurred while generating the address book CSV.
+                CSVファイル生成時にエラーが発生しました。
+                {/* An error occurred while generating the address book CSV. */}
               </Text>
             )}
           </Text>
@@ -125,18 +127,21 @@ export const ExportEntriesModal = ({ isOpen, onClose }: ExportEntriesModalProps)
 
       <Modal.Footer withoutBorder>
         <Button size="md" variant="outlined" onClick={onClose}>
-          Cancel
+          キャンセル
+          {/* Cancel */}
         </Button>
 
         {error ? (
           <Button color="primary" size="md" disabled={loading} onClick={() => setDoRetry(true)}>
-            Retry
+            リトライ
+            {/* Retry */}
           </Button>
         ) : (
           <CSVDownloader data={csvData} bom={true} filename={`gnosis-safe-address-book-${date}`} type="link">
             <Button color="primary" size="md" disabled={loading} onClick={handleClose}>
               {loading && <StyledLoader color="secondaryLight" size="xs" />}
-              Download
+              ダウンロード
+              {/* Download */}
             </Button>
           </CSVDownloader>
         )}

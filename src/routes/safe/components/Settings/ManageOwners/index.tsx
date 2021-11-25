@@ -79,11 +79,13 @@ const ManageOwners = ({ granted, owners }: Props): ReactElement => {
     <>
       <Block className={classes.formContainer}>
         <Heading className={classes.title} tag="h2">
-          Manage Safe Owners
+          オーナーを編集
+          {/* Manage Owners */}
         </Heading>
         <Paragraph className={classes.annotation}>
-          Add, remove and replace owners or rename existing owners. Owner names are only stored locally and never shared
-          with Gnosis or any third parties.
+          オーナーの追加、削除、名前の変更ができます。オーナー名は、お客様にのみ表示され、第三者に表示されることはありません。
+          {/* Add, remove and replace owners or rename existing owners. Owner names are only stored locally and never shared
+          with Gnosis or any third parties. */}
         </Paragraph>
         <TableContainer>
           <Table
@@ -156,7 +158,8 @@ const ManageOwners = ({ granted, owners }: Props): ReactElement => {
                 testId={ADD_OWNER_BTN_TEST_ID}
                 variant="contained"
               >
-                Add new owner
+                オーナーを追加する
+                {/* Add new owner */}
               </Button>
             </Col>
           </Row>

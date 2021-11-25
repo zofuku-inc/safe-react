@@ -38,7 +38,8 @@ describe('<LoadSafePage>', () => {
     expect(screen.getByText('Review')).toBeInTheDocument()
   })
 
-  describe('Loading a specific Safe from URL', () => {
+  // describe('Loading a specific Safe from URL', () => {
+  describe('URLからウォレットをロード中', () => {
     beforeAll(() => {
       history.push('/load/rin:0xb3b83bf204C458B461de9B0CD2739DB152b4fa5A')
     })
@@ -56,7 +57,7 @@ describe('<LoadSafePage>', () => {
       expect(screen.queryByText('Select network')).not.toBeInTheDocument()
       const safeAddressInputNode = screen.getByTestId('load-safe-address-field')
       const safeNameInputNode = screen.getByTestId('load-safe-name-field')
-      expect(safeNameInputNode?.getAttribute('placeholder')).toMatch(/.+-rinkeby-safe/)
+      expect(safeNameInputNode?.getAttribute('placeholder')).toMatch(/.+-rinkeby-wallet/)
       expect((safeAddressInputNode as HTMLInputElement).value).toBe('0xb3b83bf204C458B461de9B0CD2739DB152b4fa5A')
     })
 
@@ -84,11 +85,12 @@ describe('<LoadSafePage>', () => {
       fireEvent.change(safeAddressInputNode, { target: { value: '' } })
       fireEvent.change(safeAddressInputNode, { target: { value: '0x3F4b507632681059a136701188bF6217F58c6A10' } })
       await screen.findByTestId('safeAddress-valid-address-adornment')
-      expect(safeNameInputNode?.getAttribute('placeholder')).toMatch(/.+-rinkeby-safe/)
+      expect(safeNameInputNode?.getAttribute('placeholder')).toMatch(/.+-rinkeby-wallet/)
     })
   })
 
-  describe('Step 1: Select network', () => {
+  // describe('Step 1: Select network', () => {
+  describe('Step 1: ネットワークの選択', () => {
     it('Shows the current selected network', () => {
       render(<LoadSafePage />)
 
@@ -174,7 +176,8 @@ describe('<LoadSafePage>', () => {
     })
   })
 
-  describe('Step 2: Name and address', () => {
+  // describe('Step 2: Name and address', () => {
+  describe('Step 2: ウォレット名とアドレス', () => {
     it('Checks if the Safe Address is a valid Safe Address', async () => {
       render(<LoadSafePage />)
 
@@ -355,7 +358,8 @@ describe('<LoadSafePage>', () => {
     })
   })
 
-  describe('Step 3: Owner', () => {
+  // describe('Step 3: Owner', () => {
+  describe('Step 3: オーナー', () => {
     it('shows the number of owners', async () => {
       render(<LoadSafePage />)
 
@@ -431,7 +435,8 @@ describe('<LoadSafePage>', () => {
     })
   })
 
-  describe('Step 4: Review', () => {
+  // describe('Step 4: Review', () => {
+  describe('Step 4: レビュー', () => {
     it('shows the basic info of the Safe', async () => {
       const { container } = render(<LoadSafePage />)
 

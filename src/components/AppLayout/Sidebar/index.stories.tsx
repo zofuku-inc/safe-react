@@ -9,29 +9,35 @@ export default {
 
 const items: ListItemType[] = [
   {
-    label: 'Assets',
+    // label: 'Assets',
+    label: 'ウォレット残高',
     icon: <Icon size="md" type="assets" />,
     href: '#',
   },
   {
-    label: 'Settings',
+    // label: 'Settings',
+    label: '設定',
     icon: <Icon size="md" type="settings" />,
     href: '#',
     subItems: [
       {
-        label: 'Safe Details',
+        // label: 'Safe Details',
+        label: 'ウォレット情報',
         href: '#',
       },
       {
-        label: 'Owners',
+        // label: 'Owners',
+        label: 'オーナー',
         href: '#',
       },
       {
-        label: 'Policies',
+        // label: 'Policies',
+        label: 'ルール',
         href: '#',
       },
       {
-        label: 'Advanced',
+        // label: 'Advanced',
+        label: ' Nonce設定',
         href: '#',
       },
     ],

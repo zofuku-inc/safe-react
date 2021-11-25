@@ -132,12 +132,14 @@ export const ReviewReplaceOwnerModal = ({
                 <Block className={classes.details}>
                   <Block margin="lg">
                     <Paragraph color="primary" noMargin size="lg">
-                      Details
+                      詳細情報
+                      {/* Details */}
                     </Paragraph>
                   </Block>
                   <Block margin="lg">
                     <Paragraph color="disabled" noMargin size="sm">
-                      Safe name
+                      ウォレット名
+                      {/* Safe name */}
                     </Paragraph>
                     <Paragraph className={classes.name} color="primary" noMargin size="lg" weight="bolder">
                       {safeName}
@@ -145,7 +147,8 @@ export const ReviewReplaceOwnerModal = ({
                   </Block>
                   <Block margin="lg">
                     <Paragraph color="disabled" noMargin size="sm">
-                      Any transaction requires the confirmation of:
+                      トランザクションに必要な承認数：
+                      {/* Any transaction requires the confirmation of: */}
                     </Paragraph>
                     <Paragraph className={classes.name} color="primary" noMargin size="lg" weight="bolder">
                       {`${threshold} out of ${owners?.length || 0} owner(s)`}
@@ -181,7 +184,8 @@ export const ReviewReplaceOwnerModal = ({
                 )}
                 <Row align="center" className={classes.info}>
                   <Paragraph color="primary" noMargin size="md" weight="bolder">
-                    REMOVING OWNER &darr;
+                    オーナーを削除 &darr;
+                    {/* REMOVING OWNER &darr; */}
                   </Paragraph>
                 </Row>
                 <Hairline />
@@ -198,7 +202,8 @@ export const ReviewReplaceOwnerModal = ({
                 </Row>
                 <Row align="center" className={classes.info}>
                   <Paragraph color="primary" noMargin size="md" weight="bolder">
-                    ADDING NEW OWNER &darr;
+                    オーナーを追加 &darr;
+                    {/* ADDING NEW OWNER &darr; */}
                   </Paragraph>
                 </Row>
                 <Hairline />
@@ -239,7 +244,8 @@ export const ReviewReplaceOwnerModal = ({
           />
           <Modal.Footer withoutBorder>
             <Modal.Footer.Buttons
-              cancelButtonProps={{ onClick: onClickBack, text: 'Back' }}
+              // cancelButtonProps={{ onClick: onClickBack, text: 'Back' }}
+              cancelButtonProps={{ onClick: onClickBack, text: 'もどる' }}
               confirmButtonProps={{
                 onClick: () => onSubmit(txParameters),
                 status: buttonStatus,

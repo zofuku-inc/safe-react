@@ -41,7 +41,8 @@ const RemoveSafeModal = ({ isOpen, onClose }: RemoveSafeModalProps): React.React
     >
       <Row align="center" className={classes.heading} grow>
         <Paragraph className={classes.manage} noMargin weight="bolder">
-          Remove Safe
+          マルチシグを削除
+          {/* Remove Safe */}
         </Paragraph>
         <IconButton disableRipple onClick={onClose}>
           <Close className={classes.close} />
@@ -62,8 +63,11 @@ const RemoveSafeModal = ({ isOpen, onClose }: RemoveSafeModalProps): React.React
         </Row>
         <Row className={classes.description}>
           <Paragraph noMargin size="lg">
-            Removing a Safe only removes it from your interface. <b>It does not delete the Safe</b>. You can always add
-            it back using the Safe&apos;s address.
+            このマルチシグを非表示にします。実際にスマートコントラクトが削除される訳ではありません。
+            いつでも、マルチシグウォレットアドレスで復元できます。
+
+            {/* Removing a Safe only removes it from your interface. <b>It does not delete the Safe</b>. You can always add
+            it back using the Safe&apos;s address. */}
           </Paragraph>
         </Row>
       </Block>
@@ -73,7 +77,8 @@ const RemoveSafeModal = ({ isOpen, onClose }: RemoveSafeModalProps): React.React
           confirmButtonProps={{
             onClick: onRemoveSafeHandler,
             color: 'error',
-            text: 'Remove',
+            // text: 'Remove',
+            text: '削除',
           }}
         />
       </GenericModal.Footer>

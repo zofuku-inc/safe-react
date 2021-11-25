@@ -131,8 +131,9 @@ const SafeDetails = (): ReactElement => {
     <GnoForm onSubmit={handleSubmit}>
       {() => (
         <>
-          <Block className={classes.formContainer}>
+          {/* <Block className={classes.formContainer}>
             <Heading tag="h2">Contract Version</Heading>
+            <Heading tag="h2">コントラクトバージョン</Heading>
             <Row align="end" grow>
               <StyledLink rel="noreferrer noopener" target="_blank" href={safeInfo?.deployerRepoUrl}>
                 <Text size="xl" as="span" color="primary">
@@ -158,10 +159,11 @@ const SafeDetails = (): ReactElement => {
                 </Paragraph>
               </Row>
             ) : null}
-          </Block>
+          </Block> */}
 
           <Block className={classes.formContainer}>
-            <Heading tag="h2">Blockchain Network</Heading>
+            {/* <Heading tag="h2">Blockchain Network</Heading> */}
+            <Heading tag="h2">ブロックチェーンネットワーク</Heading>
             <StyledParagraph>
               <ChainIndicator chainId={chainId} />
             </StyledParagraph>
@@ -169,19 +171,23 @@ const SafeDetails = (): ReactElement => {
 
           {safeName != null && (
             <Block className={classes.formContainer}>
-              <Heading tag="h2">Modify Safe Name</Heading>
+              {/* <Heading tag="h2">Modify Safe Name</Heading> */}
+              <Heading tag="h2">マルチシグウォレット名を編集</Heading>
               <Paragraph>
-                You can change the name of this Safe. This name is only stored locally and never shared with Gnosis or
-                any third parties.
+                マルチシグウォレットの名前を変更できます。この名前は、お客様にのみ表示され、第三者に公開されることはありません。
+                {/* You can change the name of this Safe. This name is only stored locally and never shared with Gnosis or
+                any third parties. */}
               </Paragraph>
               <Block className={classes.root}>
                 <Field
                   component={TextField}
                   defaultValue={safeName}
                   name="safeName"
-                  placeholder="Safe name*"
+                  // placeholder="Safe name*"
+                  placeholder="ウォレット名 *"
                   testId={SAFE_NAME_INPUT_TEST_ID}
-                  text="Safe name*"
+                  // text="Safe name*"
+                  text="ウォレット名"
                   type="text"
                   validate={composeValidators(required, validAddressBookName)}
                 />
@@ -199,7 +205,8 @@ const SafeDetails = (): ReactElement => {
                 type="submit"
                 variant="contained"
               >
-                Save
+                保存する
+                {/* Save */}
               </Button>
             </Col>
           </Row>

@@ -94,7 +94,8 @@ const Beneficiary = (): ReactElement => {
           pristine={pristine}
           setSelectedEntry={setSelectedEntry}
           setIsValidAddress={() => {}}
-          label="Beneficiary"
+          // label="Beneficiary"
+          label="権限を与えるウォレット"
         />
       </BeneficiaryInput>
       <BeneficiaryScan>

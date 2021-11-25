@@ -82,16 +82,22 @@ const ResetTimeOptions = styled.div`
   grid-area: resetTimeOption;
 `
 
+// const RESET_TIME_OPTIONS = [
+//   { label: '1 day', value: '1440' }, // 1 day x 24h x 60min
+//   { label: '1 week', value: '10080' }, // 7 days x 24h x 60min
+//   { label: '1 month', value: '43200' }, // 30 days x 24h x 60min
+// ]
+
 const RESET_TIME_OPTIONS = [
-  { label: '1 day', value: '1440' }, // 1 day x 24h x 60min
-  { label: '1 week', value: '10080' }, // 7 days x 24h x 60min
-  { label: '1 month', value: '43200' }, // 30 days x 24h x 60min
+  { label: '1 日', value: '1440' }, // 1 day x 24h x 60min
+  { label: '1 週間', value: '10080' }, // 7 days x 24h x 60min
+  { label: '1 ヶ月', value: '43200' }, // 30 days x 24h x 60min
 ]
 
 const RINKEBY_RESET_TIME_OPTIONS = [
-  { label: '5 minutes', value: '5' },
-  { label: '30 minutes', value: '30' },
-  { label: '1 hour', value: '60' },
+  { label: '5 分', value: '5' },
+  { label: '30 分', value: '30' },
+  { label: '1 時間', value: '60' },
 ]
 
 export const getResetTimeOptions = (): RadioButtonOption[] => {
@@ -106,18 +112,22 @@ const ResetTime = (): ReactElement => {
 
   const resetTimeOptions = getResetTimeOptions()
 
-  const switchExplanation = withResetTime ? 'choose reset time period' : 'one time'
+  // const switchExplanation = withResetTime ? 'choose reset time period' : 'one time'
+  const switchExplanation = withResetTime ? ' リセット期間を設定 ' : ' 一度のみ '
 
   return (
     <>
       <ResetTimeLabel>
-        <Text size="xl">Set a reset time so the allowance automatically refills after the defined time period.</Text>
+        {/* <Text size="xl">Set a reset time so the allowance automatically refills after the defined time period.</Text> */}
+        <Text size="xl">一定期間を超えると、自動的に権限が戻る設定ができます。</Text>
       </ResetTimeLabel>
       <ResetTimeToggle>
-        <Switch label={`Reset time (${switchExplanation})`} name="withResetTime" />
+        {/* <Switch label={`Reset time (${switchExplanation})`} name="withResetTime" /> */}
+        <Switch label={`期間を設定する (${switchExplanation})`} name="withResetTime" />
       </ResetTimeToggle>
       {withResetTime && (
         <ResetTimeOptions>
+          {/* <SafeRadioButtons groupName="resetTime" initialValue={resetTimeOptions[0].value} options={resetTimeOptions} /> */}
           <SafeRadioButtons groupName="resetTime" initialValue={resetTimeOptions[0].value} options={resetTimeOptions} />
         </ResetTimeOptions>
       )}

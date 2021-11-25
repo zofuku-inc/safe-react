@@ -53,12 +53,14 @@ function ReviewLoadStep(): ReactElement {
         <DetailsContainer>
           <Block margin="lg">
             <Paragraph color="primary" noMargin size="lg" data-testid="load-safe-step-three">
-              Review details
+              レビュー詳細
+              {/* Review details */}
             </Paragraph>
           </Block>
           <Block margin="lg">
             <Paragraph color="disabled" noMargin size="sm">
-              Network
+              ネットワーク
+              {/* Network */}
             </Paragraph>
             <StyledParagraph color="disabled" noMargin size="sm" data-testid="load-form-review-safe-network">
               <NetworkLabel />
@@ -66,7 +68,8 @@ function ReviewLoadStep(): ReactElement {
           </Block>
           <Block margin="lg">
             <Paragraph color="disabled" noMargin size="sm">
-              Name of the Safe
+              ウォレットの名前
+              {/* Name of the Safe */}
             </Paragraph>
             <Paragraph color="primary" noMargin size="lg" weight="bolder" data-testid="load-form-review-safe-name">
               {safeName}
@@ -74,7 +77,8 @@ function ReviewLoadStep(): ReactElement {
           </Block>
           <Block margin="lg">
             <Paragraph color="disabled" noMargin size="sm">
-              Safe address
+              マルチシグウォレットアドレス
+              {/* Safe address */}
             </Paragraph>
             <SafeAddressContainer>
               <EthHashInfo
@@ -88,18 +92,22 @@ function ReviewLoadStep(): ReactElement {
           </Block>
           <Block margin="lg">
             <Paragraph color="disabled" noMargin size="sm">
-              Connected wallet client is owner?
+              接続されたウォレットはオーナーですか？
+              {/* Connected wallet client is owner? */}
             </Paragraph>
             <Paragraph data-testid={'connected-wallet-is-owner'} color="primary" noMargin size="lg" weight="bolder">
-              {isUserConnectedWalletASAfeOwner ? 'Yes' : 'No (read-only)'}
+              {/* {isUserConnectedWalletASAfeOwner ? 'Yes' : 'No (read-only)'} */}
+              {isUserConnectedWalletASAfeOwner ? 'はい' : 'いいえ (編集不可)'}
             </Paragraph>
           </Block>
           <Block margin="lg">
             <Paragraph color="disabled" noMargin size="sm">
-              Any transaction requires the confirmation of:
+              取引に必要な承認数：
+              {/* Any transaction requires the confirmation of: */}
             </Paragraph>
             <Paragraph color="primary" noMargin size="lg" weight="bolder">
-              {`${threshold} out of ${ownerList.length} owners`}
+              {/* {`${threshold} out of ${ownerList.length} owners`} */}
+              {`${threshold} 人の承認 / ${ownerList.length} オーナー`}
             </Paragraph>
           </Block>
         </DetailsContainer>
@@ -108,7 +116,7 @@ function ReviewLoadStep(): ReactElement {
         <TableContainer>
           <OwnersContainer>
             <Paragraph color="primary" noMargin size="lg">
-              {`${ownerList.length} Safe owners`}
+              {`${ownerList.length} オーナー`}
             </Paragraph>
           </OwnersContainer>
           <Hairline />

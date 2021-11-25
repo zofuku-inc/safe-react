@@ -30,6 +30,6 @@ describe('useMnemonicName tests', () => {
 
   it('should return a random safe name', () => {
     const { result } = renderHook(() => useMnemonicSafeName())
-    expect(result.current).toMatch(/^[a-z-]+-rinkeby-safe$/)
+    expect(result.current).toMatch(/^[a-z-]+-rinkeby-wallet$/)
   })
 })

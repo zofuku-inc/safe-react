@@ -42,7 +42,8 @@ const Amount = (): ReactElement => {
     <AmountInput>
       <Field
         component={TextField}
-        label="Amount*"
+        // label="Amount*"
+        label="金額*"
         name="amount"
         type="text"
         data-testid="amount-input"

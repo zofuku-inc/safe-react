@@ -33,8 +33,10 @@ export interface AddressInputProps {
 const AddressInput = ({
   className = '',
   name = 'recipientAddress',
-  text = 'Recipient*',
-  placeholder = 'Recipient*',
+  // text = 'Recipient*',
+  text = '送り先*',
+  // placeholder = 'Recipient*',
+  placeholder = '送り先*',
   fieldMutator,
   testId,
   inputAdornment,

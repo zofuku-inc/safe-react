@@ -110,7 +110,8 @@ function Load(): ReactElement {
           <BackIcon disableRipple onClick={history.goBack}>
             <ChevronLeft />
           </BackIcon>
-          <Heading tag="h2">Add existing Safe</Heading>
+          <Heading tag="h2">作成済みウォレットの追加</Heading>
+          {/* <Heading tag="h2">Add existing Safe</Heading> */}
         </Row>
 
         {/* key={safeAddress} ensures that it goes to step 1 when the address changes */}
@@ -121,17 +122,24 @@ function Load(): ReactElement {
           key={safeAddress}
         >
           {safeAddress && shortName ? null : (
-            <StepFormElement label={selectNetworkStepLabel} nextButtonLabel="Continue">
+            <StepFormElement label={selectNetworkStepLabel} 
+            nextButtonLabel="次へ"// nextButtonLabel="Continue"
+            >
               <SelectNetworkStep />
             </StepFormElement>
           )}
           <StepFormElement label={loadSafeAddressStepLabel} validate={loadSafeAddressStepValidations}>
             <LoadSafeAddressStep />
           </StepFormElement>
-          <StepFormElement label={loadSafeOwnersStepLabel} nextButtonLabel="Continue">
+          <StepFormElement label={loadSafeOwnersStepLabel} 
+          nextButtonLabel="　次へ"// nextButtonLabel="Continue"
+          >
             <LoadSafeOwnersStep />
           </StepFormElement>
-          <StepFormElement label={reviewLoadStepLabel} nextButtonLabel="Add">
+          <StepFormElement label={reviewLoadStepLabel} 
+            nextButtonLabel=" 追加"
+            // nextButtonLabel="Add"
+          >
             <ReviewLoadStep />
           </StepFormElement>
         </StepperForm>

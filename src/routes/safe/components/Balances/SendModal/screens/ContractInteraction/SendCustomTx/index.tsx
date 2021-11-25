@@ -67,7 +67,8 @@ const SendCustomTx = ({ initialValues, isABI, onClose, onNext, switchMethod }: P
     <>
       <Row align="center" className={classes.heading} grow>
         <Paragraph className={classes.manage} noMargin weight="bolder">
-          Contract interaction
+          コントラクトを経由
+          {/* Contract interaction */}
         </Paragraph>
         <Paragraph className={classes.annotation}>1 of 2</Paragraph>
         <IconButton disableRipple onClick={onClose}>
@@ -93,15 +94,18 @@ const SendCustomTx = ({ initialValues, isABI, onClose, onNext, switchMethod }: P
                 <EthAddressInput
                   name="contractAddress"
                   onScannedValue={mutators.setContractAddress}
-                  text="Contract address*"
+                  // text="Contract address*"
+                  text="コントラクトアドレス *"
                 />
                 <Row margin="xs">
                   <Col between="lg">
                     <Paragraph color="disabled" noMargin size="md" style={{ letterSpacing: '-0.5px' }}>
-                      Value
+                      価格
+                      {/* Value */}
                     </Paragraph>
                     <ButtonLink onClick={handleClickSendMax} weight="bold">
-                      Send max
+                      最大額
+                      {/* Send max */}
                     </ButtonLink>
                   </Col>
                 </Row>
@@ -113,8 +117,10 @@ const SendCustomTx = ({ initialValues, isABI, onClose, onNext, switchMethod }: P
                         endAdornment: <InputAdornment position="end">{nativeCoin.name}</InputAdornment>,
                       }}
                       name="value"
-                      placeholder="Value*"
-                      text="Value*"
+                      // placeholder="Value*"
+                      // text="Value*"
+                      placeholder="価格 *"
+                      text="価格"
                       type="text"
                       validate={composeValidators(mustBeFloat, maxValue(ethBalance || '0'), minValue(0))}
                     />
@@ -124,8 +130,10 @@ const SendCustomTx = ({ initialValues, isABI, onClose, onNext, switchMethod }: P
                   <Col>
                     <TextAreaField
                       name="data"
-                      placeholder="Data (hex encoded)*"
-                      text="Data (hex encoded)*"
+                      // placeholder="Data (hex encoded)*"
+                      // text="Data (hex encoded)*"
+                      placeholder="データ *"
+                      text="データ *"
                       type="text"
                       validate={mustBeHexData}
                     />
@@ -133,7 +141,8 @@ const SendCustomTx = ({ initialValues, isABI, onClose, onNext, switchMethod }: P
                 </Row>
                 <Paragraph color="disabled" noMargin size="lg" style={{ letterSpacing: '-0.5px' }}>
                   <Switch checked={!isABI} onChange={handleToggleAbi} />
-                  Use custom data (hex encoded)
+                  カスタムデータ
+                  {/* Use custom data (hex encoded) */}
                 </Paragraph>
               </Block>
               <Buttons onClose={onClose} />

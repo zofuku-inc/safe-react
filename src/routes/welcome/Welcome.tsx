@@ -13,25 +13,30 @@ function Welcome(): ReactElement {
     <Page align="center">
       <Block>
         <Title size="md" strong>
-          Welcome to Zofuk uwallet.
+          Welcome to Zofuku wallet.
         </Title>
         <Title size="xs">
-          Zofuku wallet is the most trusted platform to manage digital assets. <br /> Here is how to get started:
+          Zofuku walletは、トラストレスな取引をサポートするプラットフォームです。
+          {/* Zofuku wallet is the most trusted platform to manage digital assets. <br /> Here is how to get started: */}
         </Title>
         <CardsContainer>
           <StyledCard>
             {/* Create Safe */}
             <CardContentContainer>
               <Title size="sm" strong withoutMargin>
-                Create wallet
+                ウォレットを作成
+                {/* Create wallet */}
               </Title>
               <CardDescriptionContainer>
-                <Text size="xl">Create a new multisig wallet that is controlled by one or multiple owners.</Text>
-                <Text size="xl">You will be required to pay a network fee for creating your new wallet.</Text>
+                <Text size="xl">複数のオーナーによって管理できるマルチシグウォレットを作成します。</Text>
+                <Text size="xl">新たにマルチシグウォレットを作るために、ネットワーク手数料がかかります。</Text>
+                {/* <Text size="xl">Create a new multisig wallet that is controlled by one or multiple owners.</Text>
+                <Text size="xl">You will be required to pay a network fee for creating your new wallet.</Text> */}
               </CardDescriptionContainer>
               <Button size="lg" color="primary" variant="contained" component={Link} to={OPEN_SAFE_ROUTE}>
                 <Text size="xl" color="white">
-                  + Create new wallet
+                  ウォレットの作成
+                  {/* + Create new wallet */}
                 </Text>
               </Button>
             </CardContentContainer>
@@ -39,12 +44,14 @@ function Welcome(): ReactElement {
             <CardContentContainer>
               {/* Load Safe */}
               <Title size="sm" strong withoutMargin>
-                Load Existing wallet
+                作成済みウォレットを追加
+                {/* Load Existing wallet */}
               </Title>
               <CardDescriptionContainer>
                 <Text size="xl">
-                  Already have a wallet or want to access it from a different device? Easily load your wallet using your
-                  wallet address.
+                   作成済みのマルチシグウォレットアドレスを読み込むと簡単にアクセスできます。
+                  {/* Already have a wallet or want to access it from a different device? Easily load your wallet using your
+                  wallet address. */}
                 </Text>
               </CardDescriptionContainer>
               <Button
@@ -57,7 +64,8 @@ function Welcome(): ReactElement {
                 to={LOAD_SAFE_ROUTE}
               >
                 <StyledButtonLabel size="xl" color="secondary">
-                  Add existing wallet
+                  作成済みのウォレットを追加
+                  {/* Add existing wallet */}
                 </StyledButtonLabel>
               </Button>
             </CardContentContainer>

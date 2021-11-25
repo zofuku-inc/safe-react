@@ -66,12 +66,14 @@ function ReviewNewSafeStep(): ReactElement | null {
         <DetailsContainer>
           <Block margin="lg">
             <Paragraph color="primary" noMargin size="lg">
-              Details
+             マルチシグウォレット詳細 
+             {/* Details */}
             </Paragraph>
           </Block>
           <Block margin="lg">
             <Paragraph color="disabled" noMargin size="sm">
-              Name of new Safe
+              マルチシグウォレット名
+              {/* Name of new Safe */}
             </Paragraph>
             <SafeNameParagraph
               color="primary"
@@ -85,7 +87,8 @@ function ReviewNewSafeStep(): ReactElement | null {
           </Block>
           <Block margin="lg">
             <Paragraph color="disabled" noMargin size="sm">
-              Any transaction requires the confirmation of:
+              取引に必要な承認数：
+              {/* Any transaction requires the confirmation of: */}
             </Paragraph>
             <Paragraph
               color="primary"
@@ -94,7 +97,8 @@ function ReviewNewSafeStep(): ReactElement | null {
               weight="bolder"
               data-testid={'create-safe-review-threshold-label'}
             >
-              {`${threshold} out of ${numberOfOwners} owners`}
+              {`${threshold} 人の承認 / ${numberOfOwners} オーナー`}
+              {/* {`${threshold} out of ${numberOfOwners} owners`} */}
             </Paragraph>
           </Block>
         </DetailsContainer>
@@ -103,7 +107,7 @@ function ReviewNewSafeStep(): ReactElement | null {
         <TableContainer>
           <TitleContainer>
             <Paragraph color="primary" noMargin size="lg">
-              {`${numberOfOwners} Safe owners`}
+              {`${numberOfOwners} オーナー`}
             </Paragraph>
           </TitleContainer>
           <Hairline />
@@ -131,9 +135,11 @@ function ReviewNewSafeStep(): ReactElement | null {
       </Col>
       <DescriptionContainer align="center">
         <Paragraph color="primary" noMargin size="lg">
-          You&apos;re about to create a new Safe on <NetworkLabel /> and will have to confirm a transaction with your
+          マルチシグウォレットは、 <NetworkLabel />で作成されます。取引の際は、現在接続されているお客様のウォレットで承認する必要があります。
+          マルチシグウォレットの作成には、 {gasCostFormatted} {nativeCoin.name}のネットワーク手数料がかかります。正確な手数料は、お客様のウォレット（Metamaskなど）で確認してください。
+          {/* You&apos;re about to create a new Safe on <NetworkLabel /> and will have to confirm a transaction with your
           currently connected wallet. The creation will cost approximately {gasCostFormatted} {nativeCoin.name}. The
-          exact amount will be determined by your wallet.
+          exact amount will be determined by your wallet. */}
         </Paragraph>
       </DescriptionContainer>
     </Row>

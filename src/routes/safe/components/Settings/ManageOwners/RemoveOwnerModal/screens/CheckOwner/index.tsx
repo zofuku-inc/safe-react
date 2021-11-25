@@ -47,7 +47,8 @@ export const CheckOwner = ({ onClose, onSubmit, owner }: CheckOwnerProps): React
       <Modal.Footer>
         <Modal.Footer.Buttons
           cancelButtonProps={{ onClick: onClose }}
-          confirmButtonProps={{ onClick: onSubmit, testId: REMOVE_OWNER_MODAL_NEXT_BTN_TEST_ID, text: 'Next' }}
+          // confirmButtonProps={{ onClick: onSubmit, testId: REMOVE_OWNER_MODAL_NEXT_BTN_TEST_ID, text: 'Next' }}
+          confirmButtonProps={{ onClick: onSubmit, testId: REMOVE_OWNER_MODAL_NEXT_BTN_TEST_ID, text: '次へ' }}
         />
       </Modal.Footer>
     </>

@@ -220,18 +220,22 @@ function SafeCreationProcess(): ReactElement {
       {showModal && (
         <GenericModal
           onClose={onClickModalButton}
-          title="Safe Created!"
+          title="マルチシグ作成完了!"
+          // title="Safe Created!"
           body={
             <div data-testid="safe-created-popup">
               <Paragraph>
-                You just created a new Safe on <NetworkLabel />
+                <NetworkLabel /> ネットワークで作成されました。
+                {/* You just created a new Safe on <NetworkLabel /> */}
               </Paragraph>
               <Paragraph>
-                You will only be able to use this Safe on <NetworkLabel />
+                <NetworkLabel /> ネットワークでのみ利用できます。
+                {/* You will only be able to use this Safe on <NetworkLabel /> */}
               </Paragraph>
               <Paragraph>
-                If you send assets on other networks to this address,{' '}
-                <EmphasisLabel>you will not be able to access them</EmphasisLabel>
+              {' '}<EmphasisLabel>このマルチシグウォレットアドレスに他のネットワークから資金を送金した場合、資金にはアクセスできなくなります。</EmphasisLabel>ご注意ください。
+                {/* If you send assets on other networks to this address,{' '}
+                <EmphasisLabel>you will not be able to access them</EmphasisLabel> */}
               </Paragraph>
             </div>
           }
@@ -245,7 +249,7 @@ function SafeCreationProcess(): ReactElement {
                 size="small"
                 variant="contained"
               >
-                Continue
+                次へ{/* Continue */}
               </Button>
             </ButtonContainer>
           }

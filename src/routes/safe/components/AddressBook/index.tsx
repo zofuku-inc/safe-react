@@ -163,7 +163,8 @@ const AddressBookTable = (): ReactElement => {
       <Menu>
         <Col start="sm" sm={6} xs={12}>
           <Breadcrumb>
-            <BreadcrumbElement iconType="addressBook" text="Address Book" counter={addressBook?.length.toString()} />
+            {/* <BreadcrumbElement iconType="addressBook" text="Address Book" counter={addressBook?.length.toString()} /> */}
+            <BreadcrumbElement iconType="addressBook" text="アドレス帳" counter={addressBook?.length.toString()} />
           </Breadcrumb>
         </Col>
         <Col end="sm" sm={6} xs={12}>
@@ -200,7 +201,8 @@ const AddressBookTable = (): ReactElement => {
             iconSize="sm"
             textSize="xl"
           >
-            Create entry
+            新規作成
+            {/* Create entry */}
           </ButtonLink>
         </Col>
       </Menu>
@@ -259,7 +261,8 @@ const AddressBookTable = (): ReactElement => {
                           <Icon
                             size="sm"
                             type="edit"
-                            tooltip="Edit entry"
+                            // tooltip="Edit entry"
+                            tooltip="編集"
                             className={granted ? classes.editEntryButton : classes.editEntryButtonNonOwner}
                           />
                         </ButtonHelper>
@@ -273,7 +276,8 @@ const AddressBookTable = (): ReactElement => {
                             size="sm"
                             type="delete"
                             color="error"
-                            tooltip="Delete entry"
+                            // tooltip="Delete entry"
+                            tooltip="削除"
                             className={granted ? classes.removeEntryButton : classes.removeEntryButtonNonOwner}
                           />
                         </ButtonHelper>
@@ -290,7 +294,8 @@ const AddressBookTable = (): ReactElement => {
                           >
                             <FixedIcon type="arrowSentWhite" />
                             <Text size="xl" color="white">
-                              Send
+                              送金
+                              {/* Send */}
                             </Text>
                           </StyledButton>
                         ) : null}

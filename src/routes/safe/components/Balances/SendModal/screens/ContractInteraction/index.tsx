@@ -93,7 +93,8 @@ const ContractInteraction: React.FC<ContractInteractionProps> = ({
 
   return (
     <>
-      <ModalHeader onClose={onClose} subTitle="1 of 2" title="Contract interaction" />
+      {/* <ModalHeader onClose={onClose} subTitle="1 of 2" title="Contract interaction" /> */}
+      <ModalHeader onClose={onClose} subTitle="1 of 2" title="コントラクトを経由" />
       <Hairline />
       <GnoForm
         decorators={[ensResolver]}
@@ -112,7 +113,8 @@ const ContractInteraction: React.FC<ContractInteractionProps> = ({
                 <EthAddressInput
                   name="contractAddress"
                   onScannedValue={mutators.setContractAddress}
-                  text="Contract address*"
+                  // text="Contract address*"
+                  text="コントラクトアドレス*"
                 />
                 <ContractABI />
                 <MethodsDropdown onChange={mutators.setSelectedMethod} />
@@ -122,7 +124,8 @@ const ContractInteraction: React.FC<ContractInteractionProps> = ({
                 <FormErrorMessage />
                 <Paragraph color="disabled" noMargin size="lg" style={{ letterSpacing: '-0.5px' }}>
                   <Switch checked={!isABI} onChange={() => saveForm(rest.values)} />
-                  Use custom data (hex encoded)
+                  カスタムデータ
+                  {/* Use custom data (hex encoded) */}
                 </Paragraph>
               </Block>
               <Buttons onClose={onClose} requiresMethod />

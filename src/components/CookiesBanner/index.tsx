@@ -73,7 +73,8 @@ const useStyles = makeStyles({
   },
   intercomAlert: {
     fontWeight: 'bold',
-    display: 'flex',
+    // display: 'flex',
+    display: 'none',
     justifyContent: 'center',
     padding: '0 0 13px 0',
     svg: {
@@ -81,14 +82,15 @@ const useStyles = makeStyles({
     },
   },
   intercomImage: {
-    position: 'fixed',
-    cursor: 'pointer',
-    height: '80px',
-    width: '80px',
-    bottom: '8px',
-    right: '10px',
-    zIndex: '1000',
-    boxShadow: '1px 2px 10px 0 var(rgba(40, 54, 61, 0.18))',
+    display: 'none',
+    // position: 'fixed',
+    // cursor: 'pointer',
+    // height: '80px',
+    // width: '80px',
+    // bottom: '8px',
+    // right: '10px',
+    // zIndex: '1000',
+    // boxShadow: '1px 2px 10px 0 var(rgba(40, 54, 61, 0.18))',
   },
 } as any)
 
@@ -112,17 +114,17 @@ const CookiesBanner = (): ReactElement => {
   const newAppUrl = getAppUrl()
   const isSafeAppView = newAppUrl !== null
 
-  useEffect(() => {
-    if (showIntercom && !isSafeAppView) {
-      loadIntercom()
-    }
-  }, [showIntercom, isSafeAppView])
+  // useEffect(() => {
+  //   if (showIntercom && !isSafeAppView) {
+  //     loadIntercom()
+  //   }
+  // }, [showIntercom, isSafeAppView])
 
-  useEffect(() => {
-    if (intercomLoaded && isSafeAppView) {
-      closeIntercom()
-    }
-  }, [isSafeAppView, intercomLoaded])
+  // useEffect(() => {
+  //   if (intercomLoaded && isSafeAppView) {
+  //     closeIntercom()
+  //   }
+  // }, [isSafeAppView, intercomLoaded])
 
   useEffect(() => {
     async function fetchCookiesFromStorage() {

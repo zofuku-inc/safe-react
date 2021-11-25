@@ -42,9 +42,11 @@ export const GenericFooter = ({ safeCreationTxHash }: { safeCreationTxHash: stri
 
   return (
     <span>
-      <Text size="xl">This process should take a couple of minutes.</Text>
+      <Text size="xl">この処理には数分かかる可能性があります。</Text>
+      {/* <Text size="xl">This process should take a couple of minutes.</Text> */}
       <StyledText size="xl">
-        Follow the progress on{' '}
+        ここから処理状況を確認できます。{' '}
+        {/* Follow the progress on{' '} */}
         <Link
           href={url}
           aria-label={alt}
@@ -81,10 +83,13 @@ export const ContinueFooter = ({
     >
       {continueButtonDisabled ? (
         <>
-          <Loader size="xs" color="secondaryLight" /> <LoaderText>Loading your Safe</LoaderText>
+          <Loader size="xs" color="secondaryLight" />
+          <LoaderText>作成したマルチシグウォレットをロード中</LoaderText>
+          {/* <LoaderText>Loading your Multisig wallet</LoaderText> */}
         </>
       ) : (
-        <>Get started</>
+        <>マルチシグを使ってみる</>
+        // <>Get started</>
       )}
     </Button>
   </FooterContainer>
@@ -100,10 +105,12 @@ export const ErrorFooter = ({
   <FooterContainer>
     <Hairline />
     <ButtonWithMargin onClick={onCancel} variant="contained">
-      Cancel
+      キャンセル
+      {/* Cancel */}
     </ButtonWithMargin>
     <Button color="primary" onClick={onRetry} variant="contained">
-      Retry
+      リトライ
+      {/* Retry */}
     </Button>
   </FooterContainer>
 )

@@ -6,7 +6,7 @@ describe('<Welcome>', () => {
   it('Should render Welcome container', () => {
     render(<Welcome />)
 
-    expect(screen.getByText('Welcome to Gnosis Safe.')).toBeInTheDocument()
+    expect(screen.getByText('Welcome to Zofuku wallet.')).toBeInTheDocument()
   })
 
   it('Create new Safe button should redirect to /open if a wallet is already selected', () => {
@@ -51,7 +51,7 @@ describe('<Welcome>', () => {
     render(<Welcome />, customState)
 
     const addExistingSafeLinkNode = screen.getByRole('button', {
-      name: 'Add existing Safe',
+      name: 'Add existing Multisig wallet',
     })
 
     fireEvent.click(addExistingSafeLinkNode)

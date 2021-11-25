@@ -76,7 +76,8 @@ const SimpleFormModal = ({ title, description, handleClose, handleSubmit, isOpen
 
           {/* footer */}
           <Modal.Footer>
-            <Modal.Footer.Buttons cancelButtonProps={{ text: 'Close', onClick: handleClose }} />
+            {/* <Modal.Footer.Buttons cancelButtonProps={{ text: 'Close', onClick: handleClose }} /> */}
+            <Modal.Footer.Buttons cancelButtonProps={{ text: '閉じる', onClick: handleClose }} />
           </Modal.Footer>
         </>
       )}
@@ -87,7 +88,8 @@ const SimpleFormModal = ({ title, description, handleClose, handleSubmit, isOpen
 const Username = () => (
   <label htmlFor="username">
     <Text size="lg" strong>
-      Username
+      ユーザー名
+      {/* Username */}
     </Text>
     <GnoField
       autoComplete="off"
@@ -165,7 +167,8 @@ export const RemoveSomething = (): ReactElement => {
         <Modal.Footer>
           <Modal.Footer.Buttons
             cancelButtonProps={{ onClick: handleClose }}
-            confirmButtonProps={{ onClick: handleSubmit, color: 'error', text: 'Remove' }}
+            // confirmButtonProps={{ onClick: handleSubmit, color: 'error', text: 'Remove' }}
+            confirmButtonProps={{ onClick: handleSubmit, color: 'error', text: '削除' }}
           />
         </Modal.Footer>
       </Modal>

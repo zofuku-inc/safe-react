@@ -43,12 +43,17 @@ function SelectWalletAndNetworkStep(): ReactElement {
     <Container data-testid={'select-network-step'}>
       {isWalletConnected ? (
         <Paragraph color="primary" noMargin size="lg">
-          Select network on which to create your Safe. The app is currently pointing to{' '}
-          <NetworkLabel onClick={openNetworkSelectorPopup} />
+          作成するマルチシグウォレットのネットワークを選択してください。
+
+          {' '}<NetworkLabel onClick={openNetworkSelectorPopup} />ネットワークでよろしければ、次にお進みください。
+          
+          {/* Select network on which to create your Multisig wallet. The app is currently pointing to{' '} */}
+          {/* <NetworkLabel onClick={openNetworkSelectorPopup} /> */}
         </Paragraph>
       ) : (
         <Paragraph color="primary" noMargin size="lg">
-          In order to select the network to create your Safe, you need to connect a wallet
+          ネットワークを選択するには、お客様のウォレット（Metamaskなど）を接続してください。
+          {/* In order to select the network to create your Multisig walet, you need to connect a wallet */}
         </Paragraph>
       )}
 
@@ -60,7 +65,7 @@ function SelectWalletAndNetworkStep(): ReactElement {
             color="primary"
             data-testid={'switch-network-link'}
           >
-            Switch Network
+            ネットワークの切り替え
           </ButtonLink>
         ) : (
           <ConnectButton data-testid="heading-connect-btn" />
@@ -69,7 +74,8 @@ function SelectWalletAndNetworkStep(): ReactElement {
 
       {isWalletConnected && isWrongNetwork && (
         <Paragraph color="primary" size="lg">
-          Your wallet connection must match the selected network. <WalletSwitch />
+          お客様のウォレットのネットワークと同じネットワークに設定してください。 <WalletSwitch />
+          {/* Your wallet connection must match the selected network. <WalletSwitch /> */}
         </Paragraph>
       )}
 
@@ -80,7 +86,7 @@ function SelectWalletAndNetworkStep(): ReactElement {
         open={isNetworkSelectorPopupOpen}
       >
         <StyledDialogTitle disableTypography>
-          <Typography variant={'h5'}>Select Network</Typography>
+          <Typography variant={'h5'}>ネットワークを選択</Typography>
           <IconButton aria-label="close" onClick={() => setIsNetworkSelectorPopupOpen(false)}>
             <CloseIcon />
           </IconButton>

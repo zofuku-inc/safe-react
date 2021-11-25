@@ -43,13 +43,16 @@ export const EditOwnerModal = ({ isOpen, onClose, owner }: OwnProps): React.Reac
 
   return (
     <Modal
-      description="Edit owner from Safe"
+      // description="Edit owner from Safe"
+      description="マルチシグのオーナーを編集"
       handleClose={onClose}
       open={isOpen}
       paperClassName="smaller-modal-window"
-      title="Edit owner from Safe"
+      // title="Edit owner from Safe"
+      title="マルチシグのオーナーを編集"
     >
-      <ModalHeader onClose={onClose} title="Edit owner name" />
+      {/* <ModalHeader onClose={onClose} title="Edit owner name" /> */}
+      <ModalHeader onClose={onClose} title="オーナー名を編集" />
       <Hairline />
       <GnoForm onSubmit={handleSubmit} subscription={{ pristine: true }}>
         {(...args) => {
@@ -62,9 +65,11 @@ export const EditOwnerModal = ({ isOpen, onClose, owner }: OwnProps): React.Reac
                     component={TextField}
                     initialValue={owner.name}
                     name="ownerName"
-                    placeholder="Owner name*"
+                    // placeholder="Owner name*"
+                    placeholder="オーナー名*"
                     testId={RENAME_OWNER_INPUT_TEST_ID}
-                    text="Owner name*"
+                    // text="Owner name*"
+                    text="オーナー名*"
                     type="text"
                     validate={composeValidators(required, validAddressBookName)}
                   />
@@ -83,7 +88,8 @@ export const EditOwnerModal = ({ isOpen, onClose, owner }: OwnProps): React.Reac
               <GenericModal.Footer>
                 <GenericModal.Footer.Buttons
                   cancelButtonProps={{ onClick: onClose }}
-                  confirmButtonProps={{ disabled: pristine, testId: SAVE_OWNER_CHANGES_BTN_TEST_ID, text: 'Save' }}
+                  // confirmButtonProps={{ disabled: pristine, testId: SAVE_OWNER_CHANGES_BTN_TEST_ID, text: 'Save' }}
+                  confirmButtonProps={{ disabled: pristine, testId: SAVE_OWNER_CHANGES_BTN_TEST_ID, text: '保存する' }}
                 />
               </GenericModal.Footer>
             </>

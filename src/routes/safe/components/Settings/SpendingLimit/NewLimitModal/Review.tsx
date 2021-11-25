@@ -236,8 +236,10 @@ export const ReviewSpendingLimits = ({ onBack, onClose, txToken, values }: Revie
   )
 
   const previousResetTime = (existentSpendingLimit: SpendingLimit) =>
+    // getResetTimeOptions().find(({ value }) => value === (+existentSpendingLimit.resetTimeMin).toString())?.label ??
+    // 'One-time spending limit'
     getResetTimeOptions().find(({ value }) => value === (+existentSpendingLimit.resetTimeMin).toString())?.label ??
-    'One-time spending limit'
+    '一度のみ送金可能'
 
   const closeEditModalCallback = (txParameters: TxParameters) => {
     const oldGasPrice = gasPriceFormatted
@@ -258,7 +260,8 @@ export const ReviewSpendingLimits = ({ onBack, onClose, txToken, values }: Revie
     }
   }
 
-  let confirmButtonText = 'Submit'
+  // let confirmButtonText = 'Submit'
+  let confirmButtonText = '送信'
   if (ButtonStatus.LOADING === buttonStatus) {
     confirmButtonText = txEstimationExecutionStatus === EstimationStatus.LOADING ? 'Estimating' : 'Submitting'
   }
@@ -274,31 +277,37 @@ export const ReviewSpendingLimits = ({ onBack, onClose, txToken, values }: Revie
     >
       {(txParameters, toggleEditMode) => (
         <>
-          <ModalHeader onClose={onClose} title="New spending limit" subTitle="2 of 2" />
+          {/* <ModalHeader onClose={onClose} title="New spending limit" subTitle="2 of 2" /> */}
+          <ModalHeader onClose={onClose} title="送金権限を設定" subTitle="2 of 2" />
           <Hairline />
 
           <Modal.Body>
             <Col margin="lg">
-              <AddressInfo address={values.beneficiary} title="Beneficiary" />
+              {/* <AddressInfo address={values.beneficiary} title="Beneficiary" /> */}
+              <AddressInfo address={values.beneficiary} title="権限を与えるウォレット" />
             </Col>
             <Col margin="lg">
               <TokenInfo
                 amount={fromTokenUnit(toTokenUnit(values.amount, txToken.decimals), txToken.decimals)}
-                title="Amount"
+                // title="Amount"
+                title="金額"
                 token={txToken}
               />
               {existentSpendingLimit && (
                 <Text size="lg" color="error">
-                  Previous Amount: {existentSpendingLimit.amount}
+                  更新前の金額: {existentSpendingLimit.amount}
+                  {/* Previous Amount: {existentSpendingLimit.amount} */}
                 </Text>
               )}
             </Col>
             <Col margin="lg">
-              <ResetTimeInfo title="Reset Time" label={resetTimeLabel} />
+              {/* <ResetTimeInfo title="Reset Time" label={resetTimeLabel} /> */}
+              <ResetTimeInfo title="リセット期間" label={resetTimeLabel} />
               {existentSpendingLimit && (
                 <Row align="center" margin="md">
                   <Text size="lg" color="error">
-                    Previous Reset Time: {previousResetTime(existentSpendingLimit)}
+                    {/* Previous Reset Time: {previousResetTime(existentSpendingLimit)} */}
+                    更新前の時間: {previousResetTime(existentSpendingLimit)}
                   </Text>
                 </Row>
               )}
@@ -307,7 +316,8 @@ export const ReviewSpendingLimits = ({ onBack, onClose, txToken, values }: Revie
             {existentSpendingLimit && (
               <Col margin="md">
                 <Text size="xl" color="error" center strong>
-                  You are about to replace an existent spending limit
+                  送金権限の設定を更新する。
+                  {/* You are about to replace an existent spending limit */}
                 </Text>
               </Col>
             )}
@@ -333,7 +343,8 @@ export const ReviewSpendingLimits = ({ onBack, onClose, txToken, values }: Revie
             <Modal.Footer.Buttons
               cancelButtonProps={{
                 onClick: () => onBack({ values: {}, txToken: makeToken(), step: CREATE }),
-                text: 'Back',
+                // text: 'Back',
+                text: 'もどる',
               }}
               confirmButtonProps={{
                 onClick: () => handleSubmit(txParameters),

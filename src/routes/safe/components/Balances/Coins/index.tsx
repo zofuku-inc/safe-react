@@ -150,14 +150,16 @@ const Coins = (props: Props): React.ReactElement => {
                     >
                       <FixedIcon type="arrowSentWhite" />
                       <Text size="xl" color="white">
-                        Send
+                        出金する
+                        {/* Send */}
                       </Text>
                     </StyledButton>
                   )}
                   <StyledButton color="primary" onClick={showReceiveFunds} size="md" variant="contained">
                     <FixedIcon type="arrowReceivedWhite" />
                     <Text size="xl" color="white">
-                      Receive
+                      受け取る
+                      {/* Receive */}
                     </Text>
                   </StyledButton>
                 </Row>

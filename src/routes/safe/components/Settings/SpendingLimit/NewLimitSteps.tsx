@@ -34,15 +34,18 @@ export const NewLimitSteps = (): ReactElement => (
       <Img alt="Select Beneficiary" title="Beneficiary" height={96} src={Beneficiary} />
 
       <Text size="lg" color="placeHolder" strong center>
-        Select Beneficiary
+        ウォレットを選択
+        {/* Select Beneficiary */}
       </Text>
 
-      <Text size="lg" color="placeHolder" center>
-        Define beneficiary that will be able to use the allowance.
+      <Text size="lg" color="placeHolder" >
+        資金の移動権限を持つウォレットを設定します。
+        {/* Define beneficiary that will be able to use the allowance. */}
       </Text>
 
-      <Text size="lg" color="placeHolder" center>
-        The beneficiary does not have to be an owner of this Safe
+      <Text size="lg" color="placeHolder" >
+        このマルチシグのオーナーのウォレットアドレスである必要はありません。
+        {/* The beneficiary does not have to be an owner of this Safe */}
       </Text>
     </Step>
 
@@ -52,11 +55,13 @@ export const NewLimitSteps = (): ReactElement => (
       <Img alt="Select asset and amount" title="Asset and Amount" height={96} src={AssetAmount} />
 
       <Text size="lg" color="placeHolder" strong center>
-        Select asset and amount
+        暗号資産と金額を設定
+        {/* Select asset and amount */}
       </Text>
 
-      <Text size="lg" color="placeHolder" center>
-        You can set a spending limit for any asset stored in your Safe
+      <Text size="lg" color="placeHolder" >
+        マルチシグウォレットの残高から、送金できる金額の上限を設定できます。
+        {/* You can set a spending limit for any asset stored in your Safe */}
       </Text>
     </Step>
 
@@ -66,11 +71,13 @@ export const NewLimitSteps = (): ReactElement => (
       <Img alt="Select time" title="Time" height={96} src={Time} />
 
       <Text size="lg" color="placeHolder" strong center>
-        Select time
+        時間を設定
+        {/* Select time */}
       </Text>
 
-      <Text size="lg" color="placeHolder" center>
-        You can choose to set a one-time spending limit or to have it automatically refill after a defined time-period
+      <Text size="lg" color="placeHolder" >
+        送金の権限が、一回のみ送金可能、もしくは一定時間ごとに送金可能かを設定できます。
+        {/* You can choose to set a one-time spending limit or to have it automatically refill after a defined time-period */}
       </Text>
     </Step>
   </StepWrapper>

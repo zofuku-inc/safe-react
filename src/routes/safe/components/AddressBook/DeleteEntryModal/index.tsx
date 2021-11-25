@@ -44,7 +44,8 @@ export const DeleteEntryModal = ({
             <Modal.Footer>
               <Modal.Footer.Buttons
                 cancelButtonProps={{ onClick: onClose }}
-                confirmButtonProps={{ color: 'error', testId: DELETE_ENTRY_BTN_ID, text: 'Delete' }}
+                // confirmButtonProps={{ color: 'error', testId: DELETE_ENTRY_BTN_ID, text: 'Delete' }}
+                confirmButtonProps={{ color: 'error', testId: DELETE_ENTRY_BTN_ID, text: '削除' }}
               />
             </Modal.Footer>
           </>

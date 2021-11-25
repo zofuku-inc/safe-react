@@ -101,12 +101,12 @@ export const UpdateSafeModal = ({ onClose, safeAddress, safeCurrentVersion }: Pr
                   target="_blank"
                   to={`https://github.com/gnosis/safe-contracts/releases/tag/v${LATEST_SAFE_VERSION}`}
                 >
-                  latest Gnosis Safe contracts changelog
+                  latest smart contracts changelog
                 </Link>
               </Paragraph>
               <Paragraph noMargin>
                 You will need to confirm this update just like any other transaction. This means other owners will have
-                to confirm the update in case more than one confirmation is required for this Safe.
+                to confirm the update in case more than one confirmation is required for this wallet.
               </Paragraph>
 
               {/* A warning for 1.x.x -> 1.3.0 upgrades */}
@@ -141,7 +141,8 @@ export const UpdateSafeModal = ({ onClose, safeAddress, safeCurrentVersion }: Pr
             <Modal.Footer.Buttons
               cancelButtonProps={{
                 onClick: onClose,
-                text: 'Cancel',
+                // text: 'Cancel',
+                text: 'キャンセル',
               }}
               confirmButtonProps={{
                 onClick: () => handleSubmit(txParameters),

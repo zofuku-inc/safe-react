@@ -55,50 +55,57 @@ const useSidebarItems = (): ListItemType[] => {
 
     const assetsSubItems = [
       makeEntryItem({
-        label: 'Coins',
+        // label: 'Coins',
+        label: '暗号資産',
         iconType: 'assets',
         href: currentSafeRoutes.ASSETS_BALANCES,
       }),
-      makeEntryItem({
-        disabled: !isCollectiblesEnabled,
-        label: 'Collectibles',
-        iconType: 'collectibles',
-        href: currentSafeRoutes.ASSETS_BALANCES_COLLECTIBLES,
-      }),
+      // makeEntryItem({
+      //   disabled: !isCollectiblesEnabled,
+      //   label: 'Collectibles',
+      //   label: 'コレクタブル',
+      //   iconType: 'collectibles',
+      //   href: currentSafeRoutes.ASSETS_BALANCES_COLLECTIBLES,
+      // }),
     ]
 
     const settingsSubItems = [
       makeEntryItem({
-        label: 'Safe Details',
+        // label: 'Safe Details',
+        label: 'ウォレット情報',
         badge: needsUpdate && granted,
         iconType: 'info',
         href: currentSafeRoutes.SETTINGS_DETAILS,
       }),
       IS_PRODUCTION
         ? null
-        : makeEntryItem({
-            label: 'Appearance',
-            iconType: 'eye',
-            href: currentSafeRoutes.SETTINGS_APPEARANCE,
-          }),
-      makeEntryItem({
-        label: 'Owners',
+        // : makeEntryItem({
+        //     label: 'Appearance',
+        //     iconType: 'eye',
+        //     href: currentSafeRoutes.SETTINGS_APPEARANCE,
+        //   }),
+      : makeEntryItem({
+        // label: 'Owners',
+        label: 'オーナー',
         iconType: 'owners',
         href: currentSafeRoutes.SETTINGS_OWNERS,
       }),
       makeEntryItem({
-        label: 'Policies',
+        // label: 'Policies',
+        label: 'ルール',
         iconType: 'requiredConfirmations',
         href: currentSafeRoutes.SETTINGS_POLICIES,
       }),
       makeEntryItem({
         disabled: !isSpendingLimitEnabled,
-        label: 'Spending Limit',
+        // label: 'Spending Limit',
+        label: '権限設定',
         iconType: 'fuelIndicator',
         href: currentSafeRoutes.SETTINGS_SPENDING_LIMIT,
       }),
       makeEntryItem({
-        label: 'Advanced',
+        // label: 'Advanced',
+        label: 'Nonce設定',
         iconType: 'settingsTool',
         href: currentSafeRoutes.SETTINGS_ADVANCED,
       }),
@@ -106,29 +113,33 @@ const useSidebarItems = (): ListItemType[] => {
 
     return [
       makeEntryItem({
-        label: 'ASSETS',
+        // label: 'ASSETS',
+        label: 'ウォレット残高',
         iconType: 'assets',
         href: currentSafeRoutes.ASSETS_BALANCES,
         subItems: assetsSubItems,
       }),
       makeEntryItem({
-        label: 'TRANSACTIONS',
+        // label: 'TRANSACTIONS',
+        label: 'トランザクション',
         iconType: 'transactionsInactive',
         href: currentSafeRoutes.TRANSACTIONS_HISTORY,
       }),
       makeEntryItem({
-        label: 'ADDRESS BOOK',
+        // label: 'ADDRESS BOOK',
+        label: 'アドレス帳',
         iconType: 'addressBook',
         href: currentSafeRoutes.ADDRESS_BOOK,
       }),
+      // makeEntryItem({
+      //   disabled: !safeAppsEnabled,
+      //   label: 'Apps',
+      //   iconType: 'apps',
+      //   href: currentSafeRoutes.APPS,
+      // }),
       makeEntryItem({
-        disabled: !safeAppsEnabled,
-        label: 'Apps',
-        iconType: 'apps',
-        href: currentSafeRoutes.APPS,
-      }),
-      makeEntryItem({
-        label: 'Settings',
+        // label: 'Settings',
+        label: '設定',
         iconType: 'settings',
         href: currentSafeRoutes.SETTINGS_DETAILS,
         subItems: settingsSubItems,

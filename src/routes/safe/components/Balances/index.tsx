@@ -21,7 +21,9 @@ export const MANAGE_TOKENS_BUTTON_TEST_ID = 'manage-tokens-btn'
 export const BALANCE_ROW_TEST_ID = 'balance-row'
 
 enum SECTION_NAME {
-  coins = 'Coins',
+  // coins = 'Coins',
+  // collectibles = 'Collectibles',
+  coins = '暗号資産',
   collectibles = 'Collectibles',
 }
 
@@ -59,7 +61,8 @@ const Balances = (): ReactElement => {
       <Menu>
         <Col start="sm" sm={6} xs={12}>
           <Breadcrumb>
-            <BreadcrumbElement iconType="assets" text="ASSETS" color="primary" />
+            {/* <BreadcrumbElement iconType="assets" text="ASSETS" color="primary" /> */}
+            <BreadcrumbElement iconType="assets" text="ウォレット残高" color="primary" />
             <BreadcrumbElement text={balancesSection} color="placeHolder" />
           </Breadcrumb>
         </Col>
@@ -88,7 +91,8 @@ const Balances = (): ReactElement => {
 
       {/* Receive Tokens modal */}
       <Modal
-        description="Receive Tokens Form"
+        // description="Receive Tokens Form"
+        description="トークン受け取りフォーム"
         handleClose={closeReceive}
         open={showReceive}
         paperClassName="receive-modal"

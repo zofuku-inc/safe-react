@@ -9,7 +9,8 @@ const WalletSwitch = (): ReactElement => {
   return (
     <Button variant="outlined" size="medium" color="primary" onClick={switchWalletChain}>
       <Text size="lg">
-        Switch wallet to <ChainIndicator chainId={getNetworkId()} />
+        <ChainIndicator chainId={getNetworkId()} />に変更
+        {/* Switch wallet to <ChainIndicator chainId={getNetworkId()} /> */}
       </Text>
     </Button>
   )

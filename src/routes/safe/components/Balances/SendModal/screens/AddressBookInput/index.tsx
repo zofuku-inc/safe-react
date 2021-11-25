@@ -41,7 +41,8 @@ export interface BaseAddressBookInputProps extends AddressBookProps {
 const BaseAddressBookInput = ({
   addressBookEntries,
   fieldMutator,
-  label = 'Recipient',
+  // label = 'Recipient',
+  label = '送り先',
   setIsValidAddress,
   setSelectedEntry,
   setValidationText,

@@ -13,7 +13,7 @@ const Overlay = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: ${({ theme }) => alpha(theme.colors.overlay.color, 0.75)};
-  z-index: 2147483009; /* on top of Intercom Button */
+  z-index: -2147483009; /* on top of Intercom Button */
 `
 
 const ModalApp = styled.div`
@@ -25,7 +25,7 @@ const ModalApp = styled.div`
   height: 260px;
   background-color: ${({ theme }) => theme.colors.background};
   box-shadow: 1px 2px 10px rgba(40, 54, 61, 0.18);
-  z-index: 2147483004; /* on top of Intercom Button */
+  z-index: -2147483004; /* on top of Intercom Button */
   padding: 20px 16px 0 16px;
 `
 
@@ -112,15 +112,15 @@ export const MobileNotSupported = ({ onClose }: Props): ReactElement => {
       <Overlay>
         <ModalApp>
           <StyledCard>
-            <Text size="lg">The Gnosis Safe web app is not optimized for mobile.</Text>
-            <Text size="lg">Get the mobile app for a better experience.</Text>
-            <Button size="md" color="primary" variant="contained">
+            <Text size="lg">The Zofuku wallet is not optimized for mobile.</Text>
+            <Text size="lg"> </Text>
+            {/* <Button size="md" color="primary" variant="contained">
               <StyledLink target="_blank" href="https://gnosis-safe.io/#mobile" rel="noopener noreferrer">
                 <Text color="white" size="xl">
                   Get the App
                 </Text>
               </StyledLink>
-            </Button>
+            </Button> */}
           </StyledCard>
 
           <StyledImg src={Phone} alt="Phone" />

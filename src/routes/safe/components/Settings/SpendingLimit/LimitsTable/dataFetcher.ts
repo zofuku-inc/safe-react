@@ -44,7 +44,8 @@ export const generateColumns = (): List<TableColumn> => {
     custom: false,
     disablePadding: false,
     id: SPENDING_LIMIT_TABLE_BENEFICIARY_ID,
-    label: 'Beneficiary',
+    // label: 'Beneficiary',
+    label: '権限を与えるウォレット',
     order: false,
   }
 
@@ -53,7 +54,8 @@ export const generateColumns = (): List<TableColumn> => {
     custom: false,
     disablePadding: false,
     id: SPENDING_LIMIT_TABLE_SPENT_ID,
-    label: 'Spent',
+    // label: 'Spent',
+    label: '金額',
     order: false,
     static: true,
   }
@@ -63,7 +65,8 @@ export const generateColumns = (): List<TableColumn> => {
     custom: false,
     disablePadding: false,
     id: SPENDING_LIMIT_TABLE_RESET_TIME_ID,
-    label: 'Reset Time',
+    // label: 'Reset Time',
+    label: 'リセット期間',
     order: false,
     static: true,
   }

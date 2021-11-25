@@ -47,7 +47,8 @@ export const NativeCoinValue = ({ onSetMax }: NativeCoinValueProps): React.React
           onClick={() => !disabled && onSetMax(ethBalance)}
           weight="bold"
         >
-          Send max
+          最大額
+          {/* Send max */}
         </ButtonLink>
       </Row>
       <Row margin="md">

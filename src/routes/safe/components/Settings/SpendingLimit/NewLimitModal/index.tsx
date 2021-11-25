@@ -94,8 +94,10 @@ export const NewLimitModal = ({ close, open }: SpendingLimitModalProps): ReactEl
     <Modal
       handleClose={close}
       open={open}
-      title="New spending limit"
-      description="set rules for specific beneficiaries to access funds from this Safe without having to collect all signatures"
+      // title="New spending limit"
+      title="送金権限を設定"
+      // description="set rules for specific beneficiaries to access funds from this Safe without having to collect all signatures"
+      description="全てのオーナーによる承認なしに、マルチシグウォレットの資金を送金できる権限を設定します。"
     >
       {step === CREATE && <Create initialValues={values} onCancel={close} onReview={handleReview} />}
       {step === REVIEW && <ReviewSpendingLimits onBack={create} onClose={close} txToken={txToken} values={values} />}

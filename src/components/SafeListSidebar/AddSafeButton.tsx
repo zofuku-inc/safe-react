@@ -39,7 +39,8 @@ const AddSafeButton = ({ onAdd }: Props): ReactElement => {
         <AddIcon />
 
         <Text color="primary" size="xl" strong>
-          Add Safe
+          追加する
+          {/* Add Safe */}
         </Text>
       </Fab>
     </StyledLink>

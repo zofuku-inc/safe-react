@@ -214,7 +214,8 @@ export const ReviewAddOwner = ({ onClickBack, onClose, onSubmit, values }: Revie
           <Hairline />
           <Row align="center" className={classes.buttonRow}>
             <Modal.Footer.Buttons
-              cancelButtonProps={{ onClick: onClickBack, text: 'Back' }}
+              // cancelButtonProps={{ onClick: onClickBack, text: 'Back' }}
+              cancelButtonProps={{ onClick: onClickBack, text: 'もどる' }}
               confirmButtonProps={{
                 onClick: () => onSubmit(txParameters),
                 status: buttonStatus,

@@ -124,6 +124,7 @@ export const CreateEditEntryModal = ({
                       disabled: !formState.valid,
                       testId: SAVE_NEW_ENTRY_BTN_ID,
                       text: isNew ? 'Create' : 'Save',
+                      // text: isNew ? '作成' : '保存',
                     }}
                   />
                 </Modal.Footer>

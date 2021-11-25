@@ -88,8 +88,9 @@ export const EthAddressInput = ({
               setIsValidAddress={() => {}}
               fieldMutator={onScannedValue}
               pristine={pristine}
-              label="Contract address"
-            />
+              // label="Contract address"
+              label="コントラクトアドレス"
+              />
           )}
         </Col>
         <Col center="xs" className={classes} middle="xs" xs={1}>

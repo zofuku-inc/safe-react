@@ -172,7 +172,8 @@ const SafeHeader = ({
         {granted ? null : (
           <StyledLabel>
             <Text size="sm" color="white">
-              READ ONLY
+              編集不可
+              {/* READ ONLY */}
             </Text>
           </StyledLabel>
         )}
@@ -181,7 +182,8 @@ const SafeHeader = ({
         <StyledButton size="md" disabled={!granted} color="primary" variant="contained" onClick={onNewTransactionClick}>
           <FixedIcon type="arrowSentWhite" />
           <Text size="xl" color="white">
-            New transaction
+            新規取引
+            {/* New transaction */}
           </Text>
         </StyledButton>
       </Container>

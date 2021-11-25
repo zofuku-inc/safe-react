@@ -96,7 +96,8 @@ const SafeListItem = ({
         ) : showAddSafeLink ? (
           <Link to={generateSafeRoute(LOAD_SPECIFIC_SAFE_ROUTE, routesSlug)} onClick={handleLoadSafe}>
             <Text size="sm" color="primary">
-              Add Safe
+              追加する
+              {/* Add Safe */}
             </Text>
           </Link>
         ) : null}

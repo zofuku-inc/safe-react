@@ -30,20 +30,24 @@ export const SafeAppLoadError = ({ onTxReject, onClose, requestId }: ConfirmTxMo
     <Container>
       <IconText>
         <Icon color="error" size="md" type="info" />
-        <Title size="xs">Transaction error</Title>
+        <Title size="xs">トランザクションエラー</Title>
+        {/* <Title size="xs">Transaction error</Title> */}
       </IconText>
       <Text size="lg">
-        This Safe App initiated a transaction which cannot be processed. Please get in touch with the developer of this
-        Safe App for more information.
+        トランザクションエラーが発生しました。エラー情報を問い合わせフォームよりお知らせください。
+        {/* This Safe App initiated a transaction which cannot be processed. Please get in touch with the developer of this
+        Safe App for more information. */}
       </Text>
 
       <FooterWrapper>
         <ModalFooterConfirmation
-          cancelText="Cancel"
+          cancelText="キャンセル"
+          // cancelText="Cancel"
           handleCancel={() => handleTxRejection()}
           handleOk={() => {}}
           okDisabled={true}
-          okText="Submit"
+          okText="送信"
+          // okText="Submit"
         />
       </FooterWrapper>
     </Container>

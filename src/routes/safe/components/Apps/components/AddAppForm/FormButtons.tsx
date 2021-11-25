@@ -26,7 +26,8 @@ export const FormButtons = ({ appInfo, onCancel }: Props): ReactElement => {
   return (
     <Modal.Footer.Buttons
       cancelButtonProps={{ onClick: onCancel }}
-      confirmButtonProps={{ disabled: isSubmitDisabled, text: 'Add' }}
+      // confirmButtonProps={{ disabled: isSubmitDisabled, text: 'Add' }}
+      confirmButtonProps={{ disabled: isSubmitDisabled, text: '追加' }}
     />
   )
 }

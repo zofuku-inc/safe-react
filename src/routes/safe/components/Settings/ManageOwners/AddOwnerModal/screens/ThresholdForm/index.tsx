@@ -96,10 +96,12 @@ export const ThresholdForm = ({ onClickBack, onClose, onSubmit, initialValues }:
             <Hairline />
             <Row align="center" className={classes.buttonRow}>
               <Modal.Footer.Buttons
-                cancelButtonProps={{ onClick: onClickBack, text: 'Back' }}
+                // cancelButtonProps={{ onClick: onClickBack, text: 'Back' }}
+                cancelButtonProps={{ onClick: onClickBack, text: 'もどる' }}
                 confirmButtonProps={{
                   type: 'submit',
-                  text: 'Review',
+                  // text: 'Review',
+                  text: 'レビュー',
                   testId: ADD_OWNER_THRESHOLD_NEXT_BTN_TEST_ID,
                 }}
               />

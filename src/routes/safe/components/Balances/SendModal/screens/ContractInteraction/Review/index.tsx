@@ -149,7 +149,8 @@ const ContractInteractionReview = ({ onClose, onPrev, tx }: Props): React.ReactE
     >
       {(txParameters, toggleEditMode) => (
         <>
-          <ModalHeader onClose={onClose} subTitle="2 of 2" title="Contract interaction" />
+          {/* <ModalHeader onClose={onClose} subTitle="2 of 2" title="Contract interaction" /> */}
+          <ModalHeader onClose={onClose} subTitle="2 of 2" title="コントラクトを経由" />
           <Hairline />
           <Block className={classes.formContainer}>
             <Row margin="xs">
@@ -215,7 +216,8 @@ const ContractInteractionReview = ({ onClose, onPrev, tx }: Props): React.ReactE
             })}
             <Row margin="xs">
               <Paragraph color="disabled" noMargin size="md" style={{ letterSpacing: '-0.5px' }}>
-                Data (hex encoded)
+                データ
+                {/* Data (hex encoded) */}
               </Paragraph>
             </Row>
             <Row align="center" margin="md">
@@ -248,7 +250,8 @@ const ContractInteractionReview = ({ onClose, onPrev, tx }: Props): React.ReactE
 
           <Modal.Footer withoutBorder={buttonStatus !== ButtonStatus.LOADING}>
             <Modal.Footer.Buttons
-              cancelButtonProps={{ onClick: onPrev, text: 'Back' }}
+              // cancelButtonProps={{ onClick: onPrev, text: 'Back' }}
+              cancelButtonProps={{ onClick: onPrev, text: 'もどる' }}
               confirmButtonProps={{
                 onClick: () => submitTx(txParameters),
                 status: buttonStatus,

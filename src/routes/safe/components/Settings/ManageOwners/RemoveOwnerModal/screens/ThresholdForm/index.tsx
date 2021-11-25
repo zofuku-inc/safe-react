@@ -56,7 +56,8 @@ export const ThresholdForm = ({ onClickBack, onClose, onSubmit, initialValues }:
               <Block className={classes.formContainer}>
                 <Row>
                   <Paragraph className={classes.headingText} weight="bolder">
-                    Set the required owner confirmations:
+                    承認な必要なオーナーを設定：
+                    {/* Set the required owner confirmations: */}
                   </Paragraph>
                 </Row>
                 <Row>
@@ -95,8 +96,10 @@ export const ThresholdForm = ({ onClickBack, onClose, onSubmit, initialValues }:
               </Block>
               <Modal.Footer>
                 <Modal.Footer.Buttons
-                  cancelButtonProps={{ onClick: onClickBack, text: 'Back' }}
-                  confirmButtonProps={{ testId: REMOVE_OWNER_THRESHOLD_NEXT_BTN_TEST_ID, text: 'Review' }}
+                  // cancelButtonProps={{ onClick: onClickBack, text: 'Back' }}
+                  cancelButtonProps={{ onClick: onClickBack, text: 'もどる' }}
+                  // confirmButtonProps={{ testId: REMOVE_OWNER_THRESHOLD_NEXT_BTN_TEST_ID, text: 'Review' }}
+                  confirmButtonProps={{ testId: REMOVE_OWNER_THRESHOLD_NEXT_BTN_TEST_ID, text: 'レビュー' }}
                 />
               </Modal.Footer>
             </>

@@ -48,22 +48,27 @@ const Settings = (): React.ReactElement => {
   let settingsSection
   switch (matchSafeWithSettingSection?.url) {
     case currentSafeRoutes.SETTINGS_DETAILS:
-      settingsSection = 'Safe Details'
+      // settingsSection = 'Safe Details'
+      settingsSection = 'ウォレット情報'
       break
-    case currentSafeRoutes.SETTINGS_APPEARANCE:
-      settingsSection = 'Appearance'
-      break
+    // case currentSafeRoutes.SETTINGS_APPEARANCE:
+    //   settingsSection = 'Appearance'
+    //   break
     case currentSafeRoutes.SETTINGS_OWNERS:
-      settingsSection = 'Owners'
+      // settingsSection = 'Owners'
+      settingsSection = 'オーナー'
       break
     case currentSafeRoutes.SETTINGS_POLICIES:
-      settingsSection = 'Policies'
+      // settingsSection = 'Policies'
+      settingsSection = 'ルール'
       break
     case currentSafeRoutes.SETTINGS_SPENDING_LIMIT:
-      settingsSection = 'Spending Limit'
+      // settingsSection = 'Spending Limit'
+      settingsSection = '権限設定'
       break
     case currentSafeRoutes.SETTINGS_ADVANCED:
-      settingsSection = 'Advanced'
+      // settingsSection = 'Advanced'
+      settingsSection = ' Nonce設定'
       break
     default:
       settingsSection = ''
@@ -88,14 +93,16 @@ const Settings = (): React.ReactElement => {
       <Menu>
         <Col start="sm" sm={6} xs={12}>
           <Breadcrumb>
-            <BreadcrumbElement iconType="settings" text="SETTINGS" />
+            {/* <BreadcrumbElement iconType="settings" text="SETTINGS" /> */}
+            <BreadcrumbElement iconType="settings" text="設定" />
             <BreadcrumbElement text={settingsSection} color="placeHolder" />
           </Breadcrumb>
         </Col>
         {!loadedViaUrl ? (
           <Col end="sm" sm={6} xs={12}>
             <ButtonLink className={classes.removeSafeBtn} color="error" onClick={onShow('RemoveSafe')} size="lg">
-              <Span className={classes.links}>Remove Safe</Span>
+              {/* <Span className={classes.links}>Remove Safe</Span> */}
+              <Span className={classes.links}>マルチシグを削除</Span>
               <Icon size="sm" type="delete" color="error" tooltip="Remove Safe" />
             </ButtonLink>
             <RemoveSafeModal isOpen={showRemoveSafe} onClose={onHide('RemoveSafe')} />

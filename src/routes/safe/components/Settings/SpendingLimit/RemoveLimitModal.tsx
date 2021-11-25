@@ -87,7 +87,8 @@ export const RemoveLimitModal = ({ onClose, spendingLimit, open }: RemoveSpendin
       )
     } catch (e) {
       console.error(
-        `failed to remove spending limit ${spendingLimit.beneficiary} -> ${spendingLimit.spent.tokenAddress}`,
+        // `failed to remove spending limit ${spendingLimit.beneficiary} -> ${spendingLimit.spent.tokenAddress}`,
+        `削除に失敗しました： ${spendingLimit.beneficiary} -> ${spendingLimit.spent.tokenAddress}`,
         e.message,
       )
     }
@@ -115,7 +116,8 @@ export const RemoveLimitModal = ({ onClose, spendingLimit, open }: RemoveSpendin
     }
   }
 
-  let confirmButtonText = 'Remove'
+  // let confirmButtonText = 'Remove'
+  let confirmButtonText = '削除'
   if (ButtonStatus.LOADING === buttonStatus) {
     confirmButtonText = txEstimationExecutionStatus === EstimationStatus.LOADING ? 'Estimating' : 'Removing'
   }
@@ -124,8 +126,10 @@ export const RemoveLimitModal = ({ onClose, spendingLimit, open }: RemoveSpendin
     <Modal
       handleClose={onClose}
       open={open}
-      title="Remove spending limit"
-      description="Remove the selected spending limit"
+      // title="Remove spending limit"
+      // description="Remove the selected spending limit"
+      title="権限を削除する"
+      description="選択した権限を削除する"
     >
       <EditableTxParameters
         isOffChainSignature={isOffChainSignature}
@@ -138,24 +142,28 @@ export const RemoveLimitModal = ({ onClose, spendingLimit, open }: RemoveSpendin
         {(txParameters, toggleEditMode) => {
           return (
             <>
-              <ModalHeader onClose={onClose} title="Remove spending limit" />
+              {/* <ModalHeader onClose={onClose} title="Remove spending limit" /> */}
+              <ModalHeader onClose={onClose} title="削除" />
               <Hairline />
 
               <Modal.Body>
                 <Col margin="lg">
-                  <AddressInfo title="Beneficiary" address={spendingLimit.beneficiary} />
+                  {/* <AddressInfo title="Beneficiary" address={spendingLimit.beneficiary} /> */}
+                  <AddressInfo title="権限を与えるウォレット" address={spendingLimit.beneficiary} />
                 </Col>
                 <Col margin="lg">
                   {tokenInfo && (
                     <TokenInfo
                       amount={fromTokenUnit(spendingLimit.spent.amount, tokenInfo.decimals)}
-                      title="Amount"
+                      // title="Amount"
+                      title="金額"
                       token={tokenInfo}
                     />
                   )}
                 </Col>
                 <Col margin="lg">
-                  <ResetTimeInfo title="Reset Time" label={resetTimeLabel} />
+                  {/* <ResetTimeInfo title="Reset Time" label={resetTimeLabel} /> */}
+                  <ResetTimeInfo title="リセット期間" label={resetTimeLabel} />
                 </Col>
                 {/* Tx Parameters */}
                 <TxParametersDetail

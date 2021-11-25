@@ -52,21 +52,23 @@ const Advanced = (): ReactElement => {
       {/* Nonce */}
       <Block className={classes.container}>
         <Title size="xs" withoutMargin>
-          Safe Nonce
+          Nonce（ナンス）
         </Title>
         <InfoText size="lg">
-          For security reasons, transactions made with Gnosis Safe need to be executed in order. The nonce shows you
-          which transaction will be executed next. You can find the nonce for a transaction in the transaction details.
+          {/* For security reasons, transactions made with Zofuku wallet need to be executed in order. The nonce shows you
+          which transaction will be executed next. You can find the nonce for a transaction in the transaction details. */}
+          セキュリティの観点から、トランザクションは順番通りに実行される必要があります。ナンスはトランザクションが実行された回数を示しています。トランザクションの詳細をナンスから探すことができます。
         </InfoText>
         <InfoText color="secondaryLight" size="xl">
-          Current Nonce: <Bold data-testid={'current-nonce'}>{nonce}</Bold>
+          現在のNonce: <Bold data-testid={'current-nonce'}>{nonce}</Bold>
+          {/* Current Nonce: <Bold data-testid={'current-nonce'}>{nonce}</Bold> */}
         </InfoText>
       </Block>
 
       {/* Modules */}
-      <Block className={classes.container}>
+      {/* <Block className={classes.container}>
         <Title size="xs" withoutMargin>
-          Safe Modules
+          Modules
         </Title>
         <InfoText size="lg">
           Modules allow you to customize the access-control logic of your Safe. Modules are potentially risky, so make
@@ -78,10 +80,10 @@ const Advanced = (): ReactElement => {
         </InfoText>
 
         {!moduleData || !moduleData.length ? <NoModuleLegend /> : <ModulesTable moduleData={moduleData} />}
-      </Block>
+      </Block> */}
 
       {/* Transaction guard */}
-      {isVersionWithGuards && (
+      {/* {isVersionWithGuards && (
         <Block className={classes.container}>
           <Title size="xs" withoutMargin>
             Transaction Guard
@@ -102,7 +104,7 @@ const Advanced = (): ReactElement => {
 
           {!guard ? <NoTransactionGuardLegend /> : <TransactionGuard address={guard} />}
         </Block>
-      )}
+      )} */}
     </>
   )
 }

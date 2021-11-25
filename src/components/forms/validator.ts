@@ -54,7 +54,8 @@ export const minValue =
       return undefined
     }
 
-    return `Should be greater than ${inclusive ? 'or equal to ' : ''}${min}`
+    // return `Should be greater than ${inclusive ? 'or equal to ' : ''}${min}`
+    return `${inclusive ? 'or equal to ' : ''}${min} 以上の金額を入力してください`
   }
 
 export const maxValue =

@@ -42,7 +42,8 @@ const SelectedToken = ({ assetAddress, assets }: SelectedTokenProps): React.Reac
         </>
       ) : (
         <Paragraph color="disabled" size="md" style={{ opacity: 0.5 }} weight="light">
-          Select an asset*
+          暗号資産を選択*
+          {/* Select an asset* */}
         </Paragraph>
       )}
     </MenuItem>

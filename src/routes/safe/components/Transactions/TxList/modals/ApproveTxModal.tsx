@@ -381,7 +381,8 @@ export const ApproveTxModal = ({
               {/* Footer */}
               <GenericModal.Footer withoutBorder={buttonStatus !== ButtonStatus.LOADING}>
                 <GenericModal.Footer.Buttons
-                  cancelButtonProps={{ onClick: onClose, text: 'Close' }}
+                  // cancelButtonProps={{ onClick: onClose, text: 'Close' }}
+                  cancelButtonProps={{ onClick: onClose, text: '閉じる' }}
                   confirmButtonProps={{
                     onClick: () => approveTx(txParameters),
                     type: 'submit',

@@ -36,11 +36,13 @@ function SelectNetworkStep(): ReactElement {
   return (
     <Container data-testid={'select-network-step'}>
       <Paragraph color="primary" noMargin size="lg">
-        Select network on which the Safe was created: <NetworkLabel onClick={openNetworkSelectorPopup} />
+        マルチシグウォレットのネットワークを選択: <NetworkLabel onClick={openNetworkSelectorPopup} />
+        {/* Select network on which the Safe was created: <NetworkLabel onClick={openNetworkSelectorPopup} /> */}
       </Paragraph>
       <SwitchNetworkContainer>
         <ButtonLink type="button" onClick={openNetworkSelectorPopup} color="primary">
-          Switch Network
+          ネットワークの切り替え
+          {/* Switch Network */}
         </ButtonLink>
       </SwitchNetworkContainer>
       <Dialog
@@ -50,7 +52,8 @@ function SelectNetworkStep(): ReactElement {
         open={isNetworkSelectorPopupOpen}
       >
         <StyledDialogTitle disableTypography>
-          <Typography variant={'h5'}>Select Network</Typography>
+        < Typography variant={'h5'}>ネットワークの選択</Typography>
+          {/* <Typography variant={'h5'}>Select Network</Typography> */}
           <IconButton aria-label="close" onClick={() => setIsNetworkSelectorPopupOpen(false)}>
             <CloseIcon />
           </IconButton>

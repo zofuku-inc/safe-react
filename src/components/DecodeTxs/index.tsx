@@ -165,7 +165,8 @@ const SingleTx = ({
   return (
     <TxList>
       <TxListItem onClick={() => onTxItemClick(decodedData)}>
-        <IconText iconSize="sm" iconType="code" text="Contract interaction" textSize="xl" />
+        {/* <IconText iconSize="sm" iconType="code" text="Contract interaction" textSize="xl" /> */}
+        <IconText iconSize="sm" iconType="code" text="コントラクトを経由" textSize="xl" />
 
         <FlexWrapper margin={20}>
           <Text size="xl">{decodedData.method}</Text>
@@ -193,7 +194,8 @@ const MultiSendTx = ({
     <TxList>
       {txs.map((tx, index) => (
         <TxListItem key={index} onClick={() => onTxItemClick(tx)}>
-          <IconText iconSize="sm" iconType="code" text="Contract interaction" textSize="xl" />
+          {/* <IconText iconSize="sm" iconType="code" text="Contract interaction" textSize="xl" /> */}
+          <IconText iconSize="sm" iconType="code" text="コントラクトを経由" textSize="xl" />
 
           <FlexWrapper margin={20}>
             {tx.dataDecoded && <Text size="xl">{tx.dataDecoded.method}</Text>}

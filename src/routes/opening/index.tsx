@@ -251,7 +251,8 @@ export const SafeDeployment = ({
   return (
     <Wrapper>
       <Title tag="h2" testId="safe-creation-process-title">
-        Safe creation process
+        マルチシグウォレットの作成プロセス
+        {/* Safe creation process */}
       </Title>
       <Nav>
         <Stepper activeStepIndex={stepIndex} error={error} orientation="vertical" steps={steps} />
@@ -274,7 +275,8 @@ export const SafeDeployment = ({
               size="md"
               $stepIndex={stepIndex}
             >
-              {error ? 'You can Cancel or Retry the Safe creation process.' : steps[stepIndex].instruction}
+              {error ? 'マルチシグウォレットの作成をキャンセルもしくはリトライする' : steps[stepIndex].instruction}
+              {/* {error ? 'You can Cancel or Retry the Safe creation process.' : steps[stepIndex].instruction} */}
             </FullParagraph>
           </BodyInstruction>
         )}
@@ -295,7 +297,8 @@ export const SafeDeployment = ({
 
       {stepIndex !== 0 && (
         <BackButton color="primary" minWidth={140} onClick={onCancel} data-testid="safe-creation-back-btn">
-          Back
+          もどる
+          {/* Back */}
         </BackButton>
       )}
     </Wrapper>

@@ -94,22 +94,28 @@ function CreateSafePage(): ReactElement {
           <BackIcon disableRipple onClick={history.goBack}>
             <ChevronLeft />
           </BackIcon>
-          <Heading tag="h2">Create new Safe</Heading>
+          <Heading tag="h2">マルチシグウォレットの作成</Heading>
+          {/* <Heading tag="h2">Create new Multisig wallet</Heading> */}
         </Row>
         <StepperForm initialValues={initialFormValues} onSubmit={showSafeCreationProcess} testId={'create-safe-form'}>
           <StepFormElement
             label={selectWalletAndNetworkStepLabel}
-            nextButtonLabel="Continue"
+            nextButtonLabel="次へ"
+            // nextButtonLabel="Continue"
             disableNextButton={!provider}
           >
             <SelectWalletAndNetworkStep />
           </StepFormElement>
-          <StepFormElement label={nameNewSafeStepLabel} nextButtonLabel="Continue">
+          <StepFormElement label={nameNewSafeStepLabel} 
+          nextButtonLabel="次へ"
+          // nextButtonLabel="Continue"
+          >
             <NameNewSafeStep />
           </StepFormElement>
           <StepFormElement
             label={ownersAndConfirmationsNewSafeStepLabel}
-            nextButtonLabel="Continue"
+            nextButtonLabel="次へ"
+            // nextButtonLabel="Continue"
             validate={ownersAndConfirmationsNewSafeStepValidations}
           >
             <OwnersAndConfirmationsNewSafeStep />

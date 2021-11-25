@@ -31,7 +31,8 @@ export const TxInfoCreation = ({ transaction }: { transaction: Transaction }): R
       <div className="tx-summary">
         <div className="tx-hash">
           <Text size="xl" strong as="span">
-            Transaction hash:{' '}
+            {/* Transaction hash:{' '} */}
+            トランザクションハッシュ: {' '}
           </Text>
           <InlineEthHashInfo
             textSize="xl"
@@ -43,7 +44,8 @@ export const TxInfoCreation = ({ transaction }: { transaction: Transaction }): R
         </div>
         <div className="tx-created">
           <Text size="xl" strong as="span">
-            Created:{' '}
+            作成年月日: {' '}
+            {/* Created:{' '} */}
           </Text>
           <Text size="xl" as="span">
             {formatDateTime(timestamp)}
@@ -53,7 +55,8 @@ export const TxInfoCreation = ({ transaction }: { transaction: Transaction }): R
       <div className="tx-details">
         <div className="tx-creator">
           <Text size="xl" strong>
-            Creator:{' '}
+            作成者: {' '}
+            {/* Creator:{' '} */}
           </Text>
           <EthHashInfo
             textSize="xl"
@@ -67,6 +70,7 @@ export const TxInfoCreation = ({ transaction }: { transaction: Transaction }): R
         </div>
         <div className="tx-factory">
           <Text size="xl" strong>
+            {/* Factory:{' '} */}
             Factory:{' '}
           </Text>
           {txInfo.factory ? (

@@ -37,10 +37,13 @@ const ThresholdSettings = (): React.ReactElement => {
   return (
     <>
       <Block className={classes.container}>
-        <Heading tag="h2">Required Confirmations</Heading>
-        <Paragraph>Any transaction requires the confirmation of:</Paragraph>
+        {/* <Heading tag="h2">Required Confirmations</Heading> */}
+        <Heading tag="h2">必要な承認数</Heading>
+        {/* <Paragraph>Any transaction requires the confirmation of:</Paragraph> */}
+        <Paragraph>トランザクションに必要な承認数:</Paragraph>
         <Paragraph className={classes.ownersText} size="lg">
-          <Bold>{threshold}</Bold> out of <Bold>{owners?.length || 0}</Bold> owners
+          {/* <Bold>{threshold}</Bold> out of <Bold>{owners?.length || 0}</Bold> owners */}
+          <Bold>{threshold}</Bold> 人の承認 / <Bold>{owners?.length || 0}</Bold> オーナー
         </Paragraph>
         {owners && owners.length > 1 && granted && (
           <Row className={classes.buttonRow}>
@@ -51,16 +54,19 @@ const ThresholdSettings = (): React.ReactElement => {
               onClick={toggleModal}
               variant="contained"
             >
-              Change
+              変更する
+              {/* Change */}
             </Button>
           </Row>
         )}
       </Block>
       <Modal
-        description="Change Required Confirmations Form"
+        // description="Change Required Confirmations Form"
+        description="必要承認数の変更フォーム"
         handleClose={toggleModal}
         open={isModalOpen}
-        title="Change Required Confirmations"
+        // title="Change Required Confirmations"
+        title="承認数を変更する"
       >
         <ChangeThresholdModal
           onClose={toggleModal}

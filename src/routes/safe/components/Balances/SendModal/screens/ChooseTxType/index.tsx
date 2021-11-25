@@ -62,7 +62,8 @@ const ChooseTxType = ({
     <>
       <Row align="center" className={classes.heading} grow>
         <Paragraph className={classes.manage} noMargin weight="bolder">
-          Send
+          新規取引
+          {/* Send */}
         </Paragraph>
         <IconButton disableRipple onClick={onClose}>
           <Close className={classes.closeIcon} />
@@ -73,7 +74,8 @@ const ChooseTxType = ({
         <Row align="center" margin="md">
           <Col className={classes.disclaimer} layout="column" middle="xs">
             <Paragraph className={classes.disclaimerText} noMargin>
-              Please select what you will send to
+              下記アドレスへ送金する方法を選択してください。
+              {/* Please select what you will send to */}
             </Paragraph>
             <EthHashInfo
               hash={recipientAddress}
@@ -97,9 +99,10 @@ const ChooseTxType = ({
             testId="modal-send-funds-btn"
           >
             <Img alt="Send funds" className={classNames(classes.leftIcon, classes.iconSmall)} src={Token} />
-            Send funds
+            出金する
+            {/* Send funds */}
           </Button>
-          {erc721Enabled && (
+          {/* {erc721Enabled && (
             <Button
               className={classes.firstButton}
               color="primary"
@@ -116,7 +119,7 @@ const ChooseTxType = ({
               />
               Send collectible
             </Button>
-          )}
+          )} */}
           {contractInteractionEnabled && (
             <Button
               color="primary"
@@ -132,7 +135,8 @@ const ChooseTxType = ({
                 className={classNames(classes.leftIcon, classes.iconSmall)}
                 src={ContractInteractionIcon}
               />
-              Contract interaction
+              スマートコントラクトを経由
+              {/* Contract interaction */}
             </Button>
           )}
         </Col>

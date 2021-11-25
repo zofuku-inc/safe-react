@@ -48,7 +48,8 @@ describe('<CreateSafePage>', () => {
     await waitFor(() => expect(screen.getByTestId('create-safe-form')).toBeInTheDocument())
   })
 
-  describe('Step 1: Connect wallet & select network', () => {
+  // describe('Step 1: Connect wallet & select network', () => {
+    describe('Step 1: ウォレットの接続 & ネットワークの選択', () => {
     it('Shows Connect Wallet Button if No wallet is connected', async () => {
       render(<CreateSafePage />)
 
@@ -217,7 +218,8 @@ describe('<CreateSafePage>', () => {
       await waitFor(() => expect(screen.getByTestId('create-safe-name-step')).toBeInTheDocument())
     })
   })
-  describe('Step 2: Safe Name', () => {
+  // describe('Step 2: Safe Name', () => {
+  describe('Step 2: ウォレット名', () => {
     it('Shows Safe Name text Input and the current network', async () => {
       const customState = {
         providers: {
@@ -265,7 +267,8 @@ describe('<CreateSafePage>', () => {
     })
   })
 
-  describe('Step 3: Owners and Confirmations', () => {
+  // describe('Step 3: Owners and Confirmations', () => {
+  describe('Step 3: オーナーと承認', () => {
     it('Shows user Account as a default owner', async () => {
       const customState = {
         providers: {
@@ -622,7 +625,8 @@ describe('<CreateSafePage>', () => {
       expect(getByText(thresholdSelector, '1')).toBeInTheDocument()
     })
   })
-  describe('Step 4: Review', () => {
+  // describe('Step 4: Review', () => {
+  describe('Step 4: レビュー', () => {
     beforeEach(() => {
       estimateGasForDeployingSafeSpy.mockImplementation(() => Promise.resolve(523170))
       calculateGasPriceSpy.mockImplementation(() => Promise.resolve('44000000000'))

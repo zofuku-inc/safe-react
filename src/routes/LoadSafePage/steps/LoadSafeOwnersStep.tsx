@@ -27,14 +27,17 @@ function LoadSafeOwnersStep(): ReactElement {
     <>
       <TitleContainer>
         <Paragraph color="primary" noMargin size="lg" data-testid="load-safe-owners-step">
-          This Safe on <NetworkLabel /> has {ownersWithName.length} owners. Optional: Provide a name for each owner.
+         このマルチシグウォレットは、{ownersWithName.length} オーナーで管理され、 <NetworkLabel /> ネットワークで利用できます。 各オーナーの名前を設定できます。
+          {/* This Safe on <NetworkLabel /> has {ownersWithName.length} owners. Optional: Provide a name for each owner. */}
         </Paragraph>
       </TitleContainer>
       <Hairline />
       <TableContainer>
         <HeaderContainer>
-          <Col xs={4}>NAME</Col>
-          <Col xs={8}>ADDRESS</Col>
+          <Col xs={4}>名前</Col>
+          <Col xs={8}>アドレス</Col>
+          {/* <Col xs={4}>NAME</Col>
+          <Col xs={8}>ADDRESS</Col> */}
         </HeaderContainer>
         <Hairline />
         <Block margin="md" padding="md">
@@ -47,8 +50,10 @@ function LoadSafeOwnersStep(): ReactElement {
                     component={TextField}
                     initialValue={name}
                     name={ownerFieldName}
-                    placeholder="Owner Name"
-                    text="Owner Name"
+                    placeholder="　オーナー名"
+                    text="オーナー名"
+                    // placeholder="Owner Name"
+                    // text="Owner Name"
                     type="text"
                     validate={minMaxLength(0, 50)}
                     testId={`load-safe-owner-name-${index}`}

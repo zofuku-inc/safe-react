@@ -96,7 +96,8 @@ const ReceiveModal = ({ onClose, safeAddress, safeName }: Props): ReactElement =
     <>
       <Row align="center" className={classes.heading} grow>
         <Paragraph noMargin size="xl" weight="bolder">
-          Receive assets
+          暗号資産を受け取る
+          {/* Receive assets */}
         </Paragraph>
         <IconButton disableRipple onClick={onClose}>
           <Close className={classes.close} />
@@ -104,11 +105,14 @@ const ReceiveModal = ({ onClose, safeAddress, safeName }: Props): ReactElement =
       </Row>
       <Hairline />
       <Paragraph className={classes.networkInfo} noMargin size="lg" weight="bolder">
-        {networkInfo.label} Network–only send {networkInfo.label} assets to this Safe.
+        {/* {networkInfo.label} Network–only send {networkInfo.label} assets to this Safe. */}
+        このマルチシグウォレットで利用できるネットワークは、{networkInfo.label} のみです。
       </Paragraph>
       <Paragraph className={classes.annotation} noMargin size="lg">
-        This is the address of your Safe. Deposit funds by scanning the QR code or copying the address below. Only send{' '}
-        {networkInfo.nativeCoin.name} and assets to this address (e.g. ETH, ERC20, ERC721)!
+        {/* This is the address of your Safe. Deposit funds by scanning the QR code or copying the address below. Only send{' '}
+        {networkInfo.nativeCoin.name} and assets to this address (e.g. ETH, ERC20, ERC721) */}
+        これはマルチシグウォレットのアドレスです。 QRコードを読み取るか、下記アドレスをコピーしてデポジットできます。{' '}
+        {networkInfo.nativeCoin.name} ネットワークの暗号資産またはトークン(ERC20, ERC721)を受け取ることができます。
       </Paragraph>
       <Col layout="column" middle="xs">
         <Paragraph className={classes.safeName} noMargin size="lg" weight="bold">
@@ -120,7 +124,8 @@ const ReceiveModal = ({ onClose, safeAddress, safeName }: Props): ReactElement =
         {!IS_PRODUCTION && (
           <FormControlLabel
             control={<Checkbox checked={shouldCopyShortName} onChange={handleCopyChange} name="shouldCopyShortName" />}
-            label="Copy addresses with chain prefix."
+            // label="Copy addresses with chain prefix."
+            label="チェーンプレフィックスとアドレスをコピー"
           />
         )}
         <Block className={classes.addressContainer} justify="center">
@@ -130,7 +135,8 @@ const ReceiveModal = ({ onClose, safeAddress, safeName }: Props): ReactElement =
       <Hairline />
       <Row align="center" className={classes.buttonRow}>
         <Button size="md" color="primary" onClick={onClose} variant="contained">
-          Done
+          完了
+          {/* Done */}
         </Button>
       </Row>
     </>

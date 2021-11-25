@@ -54,39 +54,39 @@ const Footer = (): React.ReactElement => {
 
   return (
     <footer className={classes.footer}>
-      <span className={classes.item}>©{date.getFullYear()} Gnosis</span>
-      <span className={classes.sep}>|</span>
-      <Link className={cn(classes.item, classes.link)} target="_blank" to="https://gnosis-safe.io/terms">
+      {/* <span className={classes.item}>©{date.getFullYear()} Zofuku</span>
+      <span className={classes.sep}>|</span> */}
+      {/* <Link className={cn(classes.item, classes.link)} target="_blank" to="https://gnosis-safe.io/terms">
         Terms
+      </Link> */}
+      {/* <span className={classes.sep}>|</span> */}
+      <Link className={cn(classes.item, classes.link)} target="_blank" to="https://zofuku.com/privacy-policy">
+        Privacy Policy
       </Link>
-      <span className={classes.sep}>|</span>
-      <Link className={cn(classes.item, classes.link)} target="_blank" to="https://gnosis-safe.io/privacy">
-        Privacy
-      </Link>
-      <span className={classes.sep}>|</span>
-      <Link className={cn(classes.item, classes.link)} target="_blank" to="https://gnosis-safe.io/licenses">
+      {/* <span className={classes.sep}>|</span> */}
+      {/* <Link className={cn(classes.item, classes.link)} target="_blank" to="https://gnosis-safe.io/licenses">
         Licenses
-      </Link>
-      <span className={classes.sep}>|</span>
-      <Link className={cn(classes.item, classes.link)} target="_blank" to="https://gnosis-safe.io/imprint">
+      </Link> */}
+      {/* <span className={classes.sep}>|</span> */}
+      {/* <Link className={cn(classes.item, classes.link)} target="_blank" to="https://gnosis-safe.io/imprint">
         Imprint
-      </Link>
-      <span className={classes.sep}>|</span>
-      <Link className={cn(classes.item, classes.link)} target="_blank" to="https://gnosis-safe.io/cookie">
+      </Link> */}
+      {/* <span className={classes.sep}>|</span> */}
+      {/* <Link className={cn(classes.item, classes.link)} target="_blank" to="https://gnosis-safe.io/cookie">
         Cookie Policy
-      </Link>
-      <span className={classes.sep}>-</span>
-      <GnoButtonLink className={cn(classes.item, classes.link, classes.buttonLink)} onClick={openCookiesHandler}>
+      </Link> */}
+      {/* <span className={classes.sep}>-</span> */}
+      {/* <GnoButtonLink className={cn(classes.item, classes.link, classes.buttonLink)} onClick={openCookiesHandler}>
         Preferences
-      </GnoButtonLink>
-      <span className={classes.sep}>|</span>
-      <Link
+      </GnoButtonLink> */}
+      {/* <span className={classes.sep}>|</span> */}
+      {/* <Link
         className={cn(classes.item, classes.link)}
         target="_blank"
         to="https://github.com/gnosis/safe-react/releases"
       >
         {appVersion}
-      </Link>
+      </Link> */}
     </footer>
   )
 }

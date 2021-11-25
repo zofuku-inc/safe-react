@@ -118,9 +118,11 @@ export const SafeList = ({ onSafeClick }: Props): ReactElement => {
               {!localSafesOnNetwork.length && !ownedSafesOnNetwork.length && (
                 <PlaceholderText size="lg" color="placeHolder">
                   <Link to={WELCOME_ROUTE} onClick={onSafeClick}>
-                    Create or add
+                    作成 or 追加
+                    {/* Create or add */}
                   </Link>{' '}
-                  an existing Safe on this network
+                    このネットワークで作成済みのウォレット
+                    {/* an existing Safe on this network */}
                 </PlaceholderText>
               )}
 

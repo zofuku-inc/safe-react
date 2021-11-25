@@ -107,14 +107,17 @@ function LoadSafeAddressStep(): ReactElement {
     <Container data-testid={'load-safe-address-step'}>
       <Block margin="md">
         <Paragraph color="primary" noMargin size="lg">
-          You are about to add an existing Gnosis Safe on <NetworkLabel />. First, choose a name and enter the Safe
-          address. The name is only stored locally and will never be shared with Gnosis or any third parties.
+          <NetworkLabel />で作成済みのマルチシグウォレットアドレスを追加してください。
+          ウォレットに名前をつけましょう。この名前は、お客様にのみ表示される名前です。
+          {/* You are about to add an existing multisig wallet on <NetworkLabel />. First, choose a name and enter the Safe
+          address. The name is only stored locally and will never be shared with Gnosis or any third parties. */}
         </Paragraph>
         <Paragraph color="primary" size="lg">
-          Your connected wallet does not have to be the owner of this Safe. In this case, the interface will provide you
-          a read-only view.
+          お客様が接続したウォレットアドレスが、このマルチシグウォレットのオーナーでない場合、マルチシグの編集はできません。
+          {/* Your connected wallet does not have to be the owner of this Safe. In this case, the interface will provide you
+          a read-only view. */}
         </Paragraph>
-
+{/* 
         <Paragraph color="primary" size="lg">
           Don&apos;t have the address of the Safe you created?{' '}
           <StyledLink
@@ -124,7 +127,7 @@ function LoadSafeAddressStep(): ReactElement {
           >
             This article explains how to find it.
           </StyledLink>
-        </Paragraph>
+        </Paragraph> */}
       </Block>
       <FieldContainer>
         <Col xs={11}>
@@ -155,8 +158,10 @@ function LoadSafeAddressStep(): ReactElement {
               }
             }
             name={FIELD_LOAD_SAFE_ADDRESS}
-            placeholder="Safe Address*"
-            text="Safe Address"
+            // placeholder="Safe Address*"
+            // text="Safe Address"
+            placeholder="アドレス*"
+            text="アドレス"
             testId="load-safe-address-field"
           />
         </Col>
@@ -166,16 +171,23 @@ function LoadSafeAddressStep(): ReactElement {
       </FieldContainer>
       <Block margin="sm">
         <Paragraph color="primary" noMargin size="lg">
-          By continuing you consent to the{' '}
+           次へボタンを押すことで、{' '}
+          <StyledLink href="https://zofuku.com/privacy-policy" rel="noopener noreferrer" target="_blank">
+            プライバシーポリシー
+          </StyledLink>に同意したことになります。
+          EthereumブロックチェーンのスマートコントラクトであるZofukuウォレットに資金が安全に保管されていることを確認できます。
+          お客様が作成したウォレットの資金は、ウォレットのオーナー以外、アクセスすることはできません。
+
+          {/* By continuing you consent to the{' '}
           <StyledLink href="https://gnosis-safe.io/terms" rel="noopener noreferrer" target="_blank">
             terms of use
           </StyledLink>
           {' and '}
-          <StyledLink href="https://gnosis-safe.io/privacy" rel="noopener noreferrer" target="_blank">
+          <StyledLink href="https://zofuku.com/privacy-policy" rel="noopener noreferrer" target="_blank">
             privacy policy
           </StyledLink>
-          . Most importantly, you confirm that your funds are held securely in the Gnosis Safe, a smart contract on the
-          Ethereum blockchain. These funds cannot be accessed by Gnosis at any point.
+          . Most importantly, you confirm that your funds are held securely in the Zofuku wallet, a smart contract on the
+          Ethereum blockchain. These funds cannot be accessed by Gnosis at any point. */}
         </Paragraph>
       </Block>
     </Container>
@@ -195,7 +207,8 @@ export const loadSafeAddressStepValidations = (values: {
   if (!safeAddress) {
     errors = {
       ...errors,
-      [FIELD_LOAD_SAFE_ADDRESS]: 'Required',
+      // [FIELD_LOAD_SAFE_ADDRESS]: 'Required',
+      [FIELD_LOAD_SAFE_ADDRESS]: '必須',
     }
     return errors
   }
@@ -205,7 +218,8 @@ export const loadSafeAddressStepValidations = (values: {
   if (isLoadingSafeAddress) {
     return {
       ...errors,
-      [FIELD_LOAD_IS_LOADING_SAFE_ADDRESS]: 'loading...',
+      // [FIELD_LOAD_IS_LOADING_SAFE_ADDRESS]: 'loading...',
+      [FIELD_LOAD_IS_LOADING_SAFE_ADDRESS]: '読み込み中...',
     }
   }
 
@@ -215,7 +229,8 @@ export const loadSafeAddressStepValidations = (values: {
   if (!isValidSafeAddress) {
     errors = {
       ...errors,
-      [FIELD_LOAD_SAFE_ADDRESS]: 'Address given is not a valid Safe address',
+      // [FIELD_LOAD_SAFE_ADDRESS]: 'Address given is not a valid Safe address',
+      [FIELD_LOAD_SAFE_ADDRESS]: 'マルチシグウォレットが存在しません。',
     }
   }
 

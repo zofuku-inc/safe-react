@@ -101,9 +101,11 @@ export const OwnerForm = ({ onClose, onSubmit, initialValues }: OwnerFormProps):
                     <Field
                       component={TextField}
                       name="ownerName"
-                      placeholder="Owner name*"
+                      placeholder="オーナー名*"
+                      // placeholder="Owner name*"
                       testId={ADD_OWNER_NAME_INPUT_TEST_ID}
-                      text="Owner name*"
+                      // text="Owner name*"
+                      text="オーナー名*"
                       type="text"
                       validate={composeValidators(required, validAddressBookName)}
                     />
@@ -124,9 +126,11 @@ export const OwnerForm = ({ onClose, onSubmit, initialValues }: OwnerFormProps):
                     <AddressInput
                       fieldMutator={mutators.setOwnerAddress}
                       name="ownerAddress"
-                      placeholder="Owner address*"
+                      // placeholder="Owner address*"
+                      placeholder="オーナーアドレス*"
                       testId={ADD_OWNER_ADDRESS_INPUT_TEST_ID}
-                      text="Owner address*"
+                      // text="Owner address*"
+                      text="オーナーアドレス*"
                       validators={[ownerDoesntExist, ownerAddressIsNotSafeAddress]}
                     />
                   </Col>
@@ -138,10 +142,12 @@ export const OwnerForm = ({ onClose, onSubmit, initialValues }: OwnerFormProps):
               <Hairline />
               <Row align="center" className={classes.buttonRow}>
                 <Modal.Footer.Buttons
-                  cancelButtonProps={{ onClick: onClose, text: 'Cancel' }}
+                  // cancelButtonProps={{ onClick: onClose, text: 'Cancel' }}
+                  cancelButtonProps={{ onClick: onClose, text: 'キャンセル' }}
                   confirmButtonProps={{
                     type: 'submit',
-                    text: 'Next',
+                    // text: 'Next',
+                    text: '次へ',
                     testId: ADD_OWNER_NEXT_BTN_TEST_ID,
                   }}
                 />

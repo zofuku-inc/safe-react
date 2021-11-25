@@ -130,7 +130,8 @@ export const RejectTxModal = ({ isOpen, onClose, gwTransaction }: Props): React.
               )}
               <GenericModal.Footer withoutBorder={confirmButtonStatus !== ButtonStatus.LOADING}>
                 <GenericModal.Footer.Buttons
-                  cancelButtonProps={{ onClick: onClose, text: 'Close' }}
+                  // cancelButtonProps={{ onClick: onClose, text: 'Close' }}
+                  cancelButtonProps={{ onClick: onClose, text: '閉じる' }}
                   confirmButtonProps={{
                     onClick: () => sendReplacementTransaction(txParameters),
                     color: 'error',

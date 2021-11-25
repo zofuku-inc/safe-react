@@ -44,7 +44,8 @@ const SelectedToken = ({ tokenAddress, tokens }: SelectTokenProps): ReactElement
         </>
       ) : (
         <Text color="placeHolder" size="xl">
-          Select an asset*
+          暗号資産を選択*
+          {/* Select an asset* */}
         </Text>
       )}
     </MenuItem>

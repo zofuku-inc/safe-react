@@ -174,7 +174,8 @@ const SendFunds = ({
 
   return (
     <>
-      <ModalHeader onClose={onClose} subTitle="1 of 2" title="Send funds" />
+      {/* <ModalHeader onClose={onClose} subTitle="1 of 2" title="Send funds" /> */}
+      <ModalHeader onClose={onClose} subTitle="1 of 2" title="出金する" />
       <Hairline />
       <GnoForm
         formMutators={formMutators}
@@ -305,10 +306,12 @@ const SendFunds = ({
                 <Row margin="xs">
                   <Col between="lg">
                     <Paragraph color="disabled" noMargin size="md" style={{ letterSpacing: '-0.5px' }}>
-                      Amount
+                      金額
+                      {/* Amount */}
                     </Paragraph>
                     <ButtonLink onClick={setMaxAllowedAmount} weight="bold" testId="send-max-btn">
-                      Send max
+                      最大額
+                      {/* Send max */}
                     </ButtonLink>
                   </Col>
                 </Row>
@@ -324,8 +327,10 @@ const SendFunds = ({
                         ),
                       }}
                       name="amount"
-                      placeholder="Amount*"
-                      text="Amount*"
+                      // placeholder="Amount*"
+                      // text="Amount*"
+                      placeholder="金額*"
+                      text="金額"
                       type="text"
                       testId="amount-input"
                     />
@@ -338,7 +343,8 @@ const SendFunds = ({
                   confirmButtonProps={{
                     disabled: !formState.valid || shouldDisableSubmitButton,
                     testId: 'review-tx-btn',
-                    text: 'Review',
+                    // text: 'Review',
+                    text: 'レビュー',
                   }}
                 />
               </Modal.Footer>

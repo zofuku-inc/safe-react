@@ -51,10 +51,14 @@ function StepperComponent(): ReactElement {
 
         const currentComponent = steps[index]
 
-        const backButtonLabel = isFirstStep ? 'Cancel' : 'Back'
+        const backButtonLabel = isFirstStep ? 
+          'キャンセル' : 'もどる'
+          // 'Cancel' : 'Back'
         const customNextButtonLabel = currentComponent.props.nextButtonLabel
 
-        const nextButtonLabel = customNextButtonLabel || 'Next'
+        const nextButtonLabel = customNextButtonLabel || 
+          '次へ'
+          // 'Next'
 
         return (
           <StepMUI key={step.props.label}>

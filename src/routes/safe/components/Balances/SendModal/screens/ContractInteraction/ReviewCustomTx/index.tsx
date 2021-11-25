@@ -104,14 +104,16 @@ const ReviewCustomTx = ({ onClose, onPrev, tx }: Props): ReactElement => {
     >
       {(txParameters, toggleEditMode) => (
         <>
-          <ModalHeader onClose={onClose} subTitle="2 of 2" title="Contract interaction" />
+          {/* <ModalHeader onClose={onClose} subTitle="2 of 2" title="Contract interaction" /> */}
+          <ModalHeader onClose={onClose} subTitle="2 of 2" title="コントラクトを経由" />
           <Hairline />
           <Block className={classes.container}>
             <SafeInfo />
             <Divider withArrow />
             <Row margin="xs">
               <Paragraph color="disabled" noMargin size="md" style={{ letterSpacing: '-0.5px' }}>
-                Recipient
+                送り先
+                {/* Recipient */}
               </Paragraph>
             </Row>
 
@@ -128,7 +130,8 @@ const ReviewCustomTx = ({ onClose, onPrev, tx }: Props): ReactElement => {
             </Row>
             <Row margin="xs">
               <Paragraph color="disabled" noMargin size="md" style={{ letterSpacing: '-0.5px' }}>
-                Value
+                価格
+                {/* Value */}
               </Paragraph>
             </Row>
             <Row align="center" margin="md">
@@ -140,7 +143,8 @@ const ReviewCustomTx = ({ onClose, onPrev, tx }: Props): ReactElement => {
             </Row>
             <Row margin="xs">
               <Paragraph color="disabled" noMargin size="md" style={{ letterSpacing: '-0.5px' }}>
-                Data (hex encoded)
+                データ
+                {/* Data (hex encoded) */}
               </Paragraph>
             </Row>
             <Row align="center" margin="md">
@@ -174,7 +178,8 @@ const ReviewCustomTx = ({ onClose, onPrev, tx }: Props): ReactElement => {
           )}
           <Modal.Footer withoutBorder={buttonStatus !== ButtonStatus.LOADING}>
             <Modal.Footer.Buttons
-              cancelButtonProps={{ onClick: onPrev, text: 'Back' }}
+              // cancelButtonProps={{ onClick: onPrev, text: 'Back' }}
+              cancelButtonProps={{ onClick: onPrev, text: 'もどる' }}
               confirmButtonProps={{
                 onClick: () => submitTx(txParameters),
                 status: buttonStatus,

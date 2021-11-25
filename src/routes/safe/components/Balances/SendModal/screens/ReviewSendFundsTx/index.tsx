@@ -208,7 +208,8 @@ const ReviewSendFundsTx = ({ onClose, onPrev, tx }: ReviewTxProps): React.ReactE
       {(txParameters, toggleEditMode) => (
         <>
           {/* Header */}
-          <ModalHeader onClose={onClose} subTitle="2 of 2" title="Send funds" />
+          {/* <ModalHeader onClose={onClose} subTitle="2 of 2" title="Send funds" /> */}
+          <ModalHeader onClose={onClose} subTitle="2 of 2" title="出金する" />
 
           <Hairline />
 
@@ -220,7 +221,8 @@ const ReviewSendFundsTx = ({ onClose, onPrev, tx }: ReviewTxProps): React.ReactE
             {/* Recipient */}
             <Row margin="xs">
               <Paragraph color="disabled" noMargin size="md" style={{ letterSpacing: '-0.5px' }}>
-                Recipient
+                受取先
+                {/* Recipient */}
               </Paragraph>
             </Row>
             <Row align="center" margin="md" data-testid="recipient-review-step">
@@ -238,7 +240,8 @@ const ReviewSendFundsTx = ({ onClose, onPrev, tx }: ReviewTxProps): React.ReactE
             {/* Amount */}
             <Row margin="xs">
               <Paragraph color="disabled" noMargin size="md" style={{ letterSpacing: '-0.5px' }}>
-                Amount
+                金額
+                {/* Amount */}
               </Paragraph>
             </Row>
             <Row align="center" margin="md">
@@ -284,7 +287,8 @@ const ReviewSendFundsTx = ({ onClose, onPrev, tx }: ReviewTxProps): React.ReactE
           {/* Footer */}
           <Modal.Footer withoutBorder={!isSpendingLimit && buttonStatus !== ButtonStatus.LOADING}>
             <Modal.Footer.Buttons
-              cancelButtonProps={{ onClick: onPrev, text: 'Back' }}
+              // cancelButtonProps={{ onClick: onPrev, text: 'Back' }}
+              cancelButtonProps={{ onClick: onPrev, text: 'もどる' }}
               confirmButtonProps={{
                 onClick: () => submitTx(txParameters),
                 status: buttonStatus,

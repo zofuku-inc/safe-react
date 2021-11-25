@@ -101,7 +101,8 @@ const ProviderInfo = ({ connected, provider, userAddress }: ProviderInfoProps): 
             />
           ) : (
             <Text size="md" color={addressColor}>
-              Connection Error
+              接続エラー
+              {/* Connection Error */}
             </Text>
           )}
         </div>

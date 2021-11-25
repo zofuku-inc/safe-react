@@ -19,7 +19,8 @@ export const generateColumns = (): List<TableColumn> => {
     custom: false,
     disablePadding: false,
     id: MODULES_TABLE_ADDRESS_ID,
-    label: 'Address',
+    // label: 'Address',
+    label: 'アドレス',
     order: false,
   }
 

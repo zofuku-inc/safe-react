@@ -45,19 +45,23 @@ export const ModifySpendingLimitDetails = ({ data }: { data: DataDecoded }): Rea
     <>
       <SpendingLimitRow>
         <Text size="xl" strong>
-          Modify spending limit:
+          修正する
+          {/* Modify spending limit: */}
         </Text>
       </SpendingLimitRow>
       <SpendingLimitRow>
-        <AddressInfo title="Beneficiary" address={beneficiary as string} />
+        {/* <AddressInfo title="Beneficiary" address={beneficiary as string} /> */}
+        <AddressInfo title="権限を与えるウォレット" address={beneficiary as string} />
       </SpendingLimitRow>
       <SpendingLimitRow>
         {tokenInfo && (
-          <TokenInfo amount={fromTokenUnit(amount as string, tokenInfo.decimals)} title="Amount" token={tokenInfo} />
+          // <TokenInfo amount={fromTokenUnit(amount as string, tokenInfo.decimals)} title="Amount" token={tokenInfo} />
+          <TokenInfo amount={fromTokenUnit(amount as string, tokenInfo.decimals)} title="金額" token={tokenInfo} />
         )}
       </SpendingLimitRow>
       <SpendingLimitRow>
-        <ResetTimeInfo title="Reset Time" label={resetTimeLabel} />
+        {/* <ResetTimeInfo title="Reset Time" label={resetTimeLabel} /> */}
+        <ResetTimeInfo title="リセット期間" label={resetTimeLabel} />
       </SpendingLimitRow>
     </>
   )
@@ -71,11 +75,13 @@ export const DeleteSpendingLimitDetails = ({ data }: { data: DataDecoded }): Rea
     <>
       <SpendingLimitRow>
         <Text size="xl" strong>
-          Delete spending limit:
+          削除する
+          {/* Delete spending limit: */}
         </Text>
       </SpendingLimitRow>
       <SpendingLimitRow>
-        <AddressInfo title="Beneficiary" address={beneficiary as string} />
+        {/* <AddressInfo title="Beneficiary" address={beneficiary as string} /> */}
+        <AddressInfo title="権限を与えるウォレット" address={beneficiary as string} />
       </SpendingLimitRow>
       <SpendingLimitRow>{tokenInfo && <TokenInfo amount="" title="Token" token={tokenInfo} />}</SpendingLimitRow>
     </>

@@ -44,7 +44,8 @@ export const LimitsTable = ({ data }: SpendingLimitTableProps): ReactElement => 
           defaultFixed
           defaultOrderBy={SPENDING_LIMIT_TABLE_BENEFICIARY_ID}
           defaultRowsPerPage={5}
-          label="Spending limits"
+          // label="Spending limits"
+          label="送金権限"
           noBorder
           size={data?.length}
         >

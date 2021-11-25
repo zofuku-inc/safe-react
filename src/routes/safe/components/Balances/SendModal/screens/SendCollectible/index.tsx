@@ -233,7 +233,8 @@ const SendCollectible = ({
               <Modal.Footer>
                 <Modal.Footer.Buttons
                   cancelButtonProps={{ onClick: onClose }}
-                  confirmButtonProps={{ disabled: shouldDisableSubmitButton, testId: 'review-tx-btn', text: 'Review' }}
+                  // confirmButtonProps={{ disabled: shouldDisableSubmitButton, testId: 'review-tx-btn', text: 'Review' }}
+                  confirmButtonProps={{ disabled: shouldDisableSubmitButton, testId: 'review-tx-btn', text: 'レビュー' }}
                 />
               </Modal.Footer>
             </>

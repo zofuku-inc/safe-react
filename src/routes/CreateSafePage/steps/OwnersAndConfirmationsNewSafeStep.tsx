@@ -82,10 +82,13 @@ function OwnersAndConfirmationsNewSafeStep(): ReactElement {
     <>
       <BlockWithPadding data-testid={'create-safe-owners-confirmation-step'}>
         <ParagraphWithMargin color="primary" noMargin size="lg">
-          Your Safe will have one or more owners. We have prefilled the first owner with your connected wallet details,
-          but you are free to change this to a different owner.
+          マルチシグウォレットには2人以上のオーナーが必要です。接続されたお客様のウォレットアドレスを１人目のオーナーとして設定しています。オーナーのウォレットアドレスは後から変更できます。
+          追加の所有者（チームメートのウォレットなど）を追加し、トランザクションが実行される前にトランザクションを確認する必要がある所有者の数を指定します。
+          一般的に、オーナーが多いほどウォレットの安全性は高くなります。このマルチシグウォレットは、 <NetworkLabel />でのみ利用可能です。
+          {/* Your Safe will have one or more owners. We have prefilled the first owner with your connected wallet details,
+          but you are free to change this to a different owner. */}
         </ParagraphWithMargin>
-        <Paragraph color="primary" size="lg">
+        {/* <Paragraph color="primary" size="lg">
           Add additional owners (e.g. wallets of your teammates) and specify how many of them have to confirm a
           transaction before it gets executed. In general, the more confirmations required, the more secure your Safe
           is.
@@ -101,12 +104,14 @@ function OwnersAndConfirmationsNewSafeStep(): ReactElement {
             <Icon size="sm" type="externalLink" color="primary" />
           </StyledLink>
           . The new Safe will ONLY be available on <NetworkLabel />
-        </Paragraph>
+        </Paragraph> */}
       </BlockWithPadding>
       <Hairline />
       <RowHeader>
-        <Col xs={3}>NAME</Col>
-        <Col xs={7}>ADDRESS</Col>
+        <Col xs={3}>名前</Col>
+        <Col xs={7}>アドレス</Col>
+        {/* <Col xs={3}>NAME</Col>
+        <Col xs={7}>ADDRESS</Col> */}
       </RowHeader>
       <Hairline />
       <Block margin="md" padding="md">
@@ -126,8 +131,10 @@ function OwnersAndConfirmationsNewSafeStep(): ReactElement {
                   <OwnerNameField
                     component={TextField}
                     name={nameFieldName}
-                    placeholder="Owner Name"
-                    text="Owner Name"
+                    placeholder="オーナー名"
+                    text="オーナー名"
+                    // placeholder="Owner Name"
+                    // text="Owner Name"
                     type="text"
                     validate={minMaxLength(0, 50)}
                     testId={nameFieldName}
@@ -152,8 +159,10 @@ function OwnersAndConfirmationsNewSafeStep(): ReactElement {
                       }
                     }
                     name={addressFieldName}
-                    placeholder="Owner Address*"
-                    text="Owner Address"
+                    placeholder="オーナーアドレス*"
+                    text="オーナーアドレス"
+                    // placeholder="Owner Address*"
+                    // text="Owner Address"
                     testId={addressFieldName}
                   />
                 </Col>
@@ -177,13 +186,17 @@ function OwnersAndConfirmationsNewSafeStep(): ReactElement {
         <OwnerContainer align="center" grow>
           <Button color="secondary" data-testid="add-new-owner" onClick={onClickAddNewOwner}>
             <Paragraph noMargin size="lg">
-              + Add another owner
+              + オーナーを追加する
+              {/* + Add another owner */}
             </Paragraph>
           </Button>
         </OwnerContainer>
         <BlockWithPadding>
           <Block>
-            <Paragraph>Any transaction requires the confirmation of:</Paragraph>
+            <Paragraph>
+              資金の移動（取引）に必要な承認の数：
+              {/* Any transaction requires the confirmation of: */}
+            </Paragraph>
           </Block>
           <OwnerContainer align="center" grow>
             <Col xs={1}>
@@ -205,7 +218,8 @@ function OwnersAndConfirmationsNewSafeStep(): ReactElement {
               </Field>
             </Col>
             <Col xs={11}>
-              <StyledParagraph noMargin>out of {owners.length} owner(s)</StyledParagraph>
+              <StyledParagraph noMargin> 人の承認 / {owners.length} オーナー</StyledParagraph>
+              {/* <StyledParagraph noMargin>out of {owners.length} owner(s)</StyledParagraph> */}
             </Col>
           </OwnerContainer>
         </BlockWithPadding>
